@@ -1,36 +1,37 @@
 # tech-challenge-fiap-otimizacao-rotas
 Otimização de Rotas para Distribuição de Medicamentos e Insumos
 
-# Na pasta onde está o código original
-mkdir -p src/{core,models,llm,visualization,utils}
-mkdir -p data/resultados tests notebooks docs
+# 1. Instale Miniconda (se não tiver)
+Baixe em: https://www.anaconda.com/docs/getting-started/miniconda/main
 
-# Criar __init__.py em todas as pastas
-touch src/__init__.py
-touch src/core/__init__.py
-touch src/models/__init__.py
-touch src/llm/__init__.py
-touch src/visualization/__init__.py
-touch src/utils/__init__.py
+# Navegue até a pasta do seu projeto
+cd "../../.."
 
-# Mover arquivos originais
-mv genetic_algorithm.py src/core/
-mv tsp.py src/core/
-mv draw_functions.py src/visualization/
-mv demo_*.py src/core/  # demos são opcionais
-mv benchmark_att48.py src/core/
+# Crie o ambiente
+conda env create -f environment.yml
 
-# Criar ambiente virtual
-python -m venv venv
+# Ative
+conda activate fiap_tsp
 
-# Ativar
-# Linux/Mac:
-source venv/bin/activate
-# Windows:
-venv\Scripts\activate
+# Verifique
+python --version
 
-# Instalar
-pip install -r requirements.txt
+# 1. Inicializar Conda
+conda init bash
+
+# 2. FECHE o Git Bash atual (importante!)
+exit
+
+# 3. Abra um NOVO Git Bash
+
+# 4. Navegue até seu projeto
+cd "../../.."
+
+# 5. Ative o ambiente
+conda activate fiap_tsp
+
+# 6. Verifique
+python --version  # Deve mostrar Python 3.9.19
 
 # Configurar OpenAI
 cp .env.example .env
