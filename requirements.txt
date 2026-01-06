@@ -1,0 +1,32 @@
+# ========================================
+# TECH CHALLENGE FASE 2 - FIAP
+# Otimização de Rotas Médicas
+# Python 3.9+ recomendado
+# ========================================
+
+# Core dependencies - VERSÕES FIXAS para reprodutibilidade
+# Nota: Usando versões com wheels pré-compiladas para Windows
+numpy==1.26.4
+matplotlib==3.8.4
+pygame==2.5.2
+pandas==2.2.2
+
+# LLM Integration
+openai==1.54.3
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Utilities
+python-dotenv==1.0.0
+tqdm==4.66.1
+
+# Optional: Para visualizações avançadas (comentado por padrão)
+# folium==0.15.0
+# plotly==5.18.0
+
+# ========================================
+# INSTALAÇÃO:
+# pip install -r requirements.txt
+# ========================================

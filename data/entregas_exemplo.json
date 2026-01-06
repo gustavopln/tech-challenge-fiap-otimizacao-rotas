@@ -1,0 +1,104 @@
+{
+  "base": {
+    "nome": "Hospital Universitário FIAP",
+    "localizacao": [
+      400,
+      200
+    ],
+    "endereco": "Av. Lins de Vasconcelos, 1222 - Aclimação, São Paulo"
+  },
+  "veiculos": [
+    {
+      "id": "V1",
+      "tipo": "Van",
+      "capacidade_kg": 50.0,
+      "autonomia_km": 100.0,
+      "velocidade_media_kmh": 40.0,
+      "custo_por_km": 2.5
+    },
+    {
+      "id": "V2",
+      "tipo": "Moto",
+      "capacidade_kg": 15.0,
+      "autonomia_km": 80.0,
+      "velocidade_media_kmh": 50.0,
+      "custo_por_km": 1.5
+    }
+  ],
+  "entregas": [
+    {
+      "id": 1,
+      "nome": "UBS Vila Mariana",
+      "localizacao": [
+        450,
+        250
+      ],
+      "prioridade": "CRITICA",
+      "tipo_material": "Soro antiofídico",
+      "peso_kg": 5.0,
+      "tempo_entrega_min": 15,
+      "observacao": "Refrigeração necessária"
+    },
+    {
+      "id": 2,
+      "nome": "Clínica São Judas",
+      "localizacao": [
+        500,
+        150
+      ],
+      "prioridade": "ALTA",
+      "tipo_material": "Insulina",
+      "peso_kg": 3.0,
+      "tempo_entrega_min": 10
+    },
+    {
+      "id": 3,
+      "nome": "PSF Jabaquara",
+      "localizacao": [
+        350,
+        300
+      ],
+      "prioridade": "MEDIA",
+      "tipo_material": "Vacinas",
+      "peso_kg": 12.0,
+      "tempo_entrega_min": 20
+    },
+    {
+      "id": 4,
+      "nome": "UPA Saúde",
+      "localizacao": [
+        550,
+        200
+      ],
+      "prioridade": "MEDIA",
+      "tipo_material": "EPIs",
+      "peso_kg": 8.0,
+      "tempo_entrega_min": 10
+    },
+    {
+      "id": 5,
+      "nome": "Hospital Santa Cruz",
+      "localizacao": [
+        320,
+        180
+      ],
+      "prioridade": "ALTA",
+      "tipo_material": "Hemoderivados",
+      "peso_kg": 4.0,
+      "tempo_entrega_min": 15,
+      "observacao": "Prazo: 2 horas"
+    },
+    {
+      "id": 6,
+      "nome": "Clínica Saúde Total",
+      "localizacao": [
+        480,
+        320
+      ],
+      "prioridade": "BAIXA",
+      "tipo_material": "Material de escritório",
+      "peso_kg": 10.0,
+      "tempo_entrega_min": 5
+    }
+  ]
+}
