@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 import random
 import itertools
-from core.genetic_algorithm import (
+from src.core.genetic_algorithm import (
     mutate,
     order_crossover,
     generate_random_population,
@@ -10,11 +10,11 @@ from core.genetic_algorithm import (
     sort_population,
     default_problems
 )
-from visualization.draw_functions import draw_paths, draw_plot, draw_cities
+from src.visualization.draw_functions import draw_paths, draw_plot, draw_cities
 import sys
 import numpy as np
 import pygame
-from core.benchmark_att48 import *
+from src.core.benchmark_att48 import *
 
 
 # Define constant values

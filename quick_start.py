@@ -11,7 +11,7 @@ from src.core.genetic_algorithm import calculate_distance
 
 # Importações dos novos módulos (quando criar os arquivos)
 # from src.models import Entrega, Veiculo, Base, PrioridadeEntrega
-# from src.core.medical_ga import calculate_fitness_with_constraints, generate_priority_biased_population
+# from src.core.medical_genetic_algorithm import calculate_fitness_with_constraints, generate_priority_biased_population
 
 
 def criar_dados_exemplo():
