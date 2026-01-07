@@ -1,7 +1,7 @@
 """
 Modelos de dados para o sistema de otimização de rotas médicas
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Tuple, List
 from enum import Enum
 
@@ -12,22 +12,39 @@ class PrioridadeEntrega(Enum):
     MEDIA = 3        # Insumos importantes
     BAIXA = 4        # Insumos regulares
 
-@dataclass
+    def peso_penalidade(self) -> float:
+        """
+        Peso usado na função fitness.
+        Quanto maior a criticidade da entrega, maior o impacto negativo no fitness em caso de violações.
+        """
+        return {
+            PrioridadeEntrega.CRITICA: 10.0,
+            PrioridadeEntrega.ALTA: 5.0,
+            PrioridadeEntrega.MEDIA: 2.0,
+            PrioridadeEntrega.BAIXA: 1.0,
+        }[self]
+    
+
+@dataclass(frozen=True)
 class Entrega:
     """Representa um ponto de entrega"""
     id: int
-    localizacao: Tuple[float, float]  # (x, y) ou (lat, lng)
     nome: str
+    localizacao: Tuple[float, float]  # (x, y) ou (lat, lng)    
     prioridade: PrioridadeEntrega
     peso_kg: float
     tempo_estimado_entrega_min: int = 10  # Tempo médio de parada
     janela_inicio: int = 0  # Hora início (em minutos desde 00:00)
     janela_fim: int = 1440  # Hora fim (padrão: 24h = 1440 min)
+
+    def penalidade_prioridade(self) -> float:
+        """Calcula penalidade com base na prioridade"""
+        return self.prioridade.peso_penalidade()
     
-    def __repr__(self):
+    def __repr__(self):        
         return f"Entrega({self.id}, {self.nome}, P{self.prioridade.value})"
 
-@dataclass
+@dataclass(frozen=True)
 class Veiculo:
     """Representa um veículo de entrega"""
     id: str
@@ -48,70 +65,56 @@ class Veiculo:
         """Verifica se pode percorrer determinada distância"""
         return distancia_km <= self.autonomia_km
 
-@dataclass
+@dataclass(frozen=True)
 class Base:
     """Representa a base/hospital de onde partem as entregas"""
-    localizacao: Tuple[float, float]
-    nome: str = "Hospital Base"
+    nome: str
+    localizacao: Tuple[float, float]    
     
     def __repr__(self):
         return f"Base({self.nome})"
 
 @dataclass
 class Rota:
-    """Representa uma rota completa de um veículo"""
+    """
+    Representa uma rota final atribuída a um veículo.
+    Essa clase NÃO é usada como cromossomo no GA.
+    """
     veiculo: Veiculo
     entregas: List[Entrega]
-    sequencia: List[Tuple[float, float]]  # Sequência de coordenadas
-    distancia_total_km: float = 0.0
-    tempo_total_min: float = 0.0
-    carga_total_kg: float = 0.0
+    distancia_total_km: float
+    tempo_total_min: float
+    sequencia: List[Tuple[float, float]]  = field(default_factory=list)  # Sequência de coordenadas
+
+    @property
+    def carga_total_kg(self) -> float:
+        """Calcula carga total da rota"""
+        return sum(e.peso_kg for e in self.entregas)
     
     def is_valida(self) -> bool:
         """Verifica se a rota respeita as restrições do veículo"""
-        return (self.carga_total_kg <= self.veiculo.capacidade_kg and 
-                self.distancia_total_km <= self.veiculo.autonomia_km)
+        return (
+            self.carga_total_kg <= self.veiculo.capacidade_kg
+            and self.distancia_total_km <= self.veiculo.autonomia_km
+        )
     
     def custo_total(self) -> float:
-        """Calcula custo total da rota"""
-        return self.distancia_total_km * self.veiculo.custo_por_km
+        """Calcula custo total da rota considerando:
+        - custo operacional por distância
+        - penalidade por criticidade das entregas
+        """
+        custo_distancia = self.distancia_total_km * self.veiculo.custo_por_km
+        penalidade_prioridade = sum(
+            entrega.prioridade.peso_penalidade() for entrega in self.entregas
+        )
+
+        return custo_distancia + penalidade_prioridade
     
     def __repr__(self):
         status = "✓" if self.is_valida() else "✗"
-        return (f"Rota[{self.veiculo.id}] {status}: "
-                f"{len(self.entregas)} entregas, "
-                f"{self.distancia_total_km:.1f}km, "
-                f"{self.carga_total_kg:.1f}kg")
-
-# Exemplo de uso
-if __name__ == "__main__":
-    # Criar base
-    base = Base(localizacao=(0, 0), nome="Hospital Universitário")
-    
-    # Criar entregas
-    entregas = [
-        Entrega(1, (10, 20), "UBS Centro", PrioridadeEntrega.CRITICA, 5.0),
-        Entrega(2, (30, 40), "Clínica Norte", PrioridadeEntrega.ALTA, 10.0),
-        Entrega(3, (50, 10), "PSF Sul", PrioridadeEntrega.MEDIA, 15.0),
-    ]
-    
-    # Criar veículo
-    veiculo = Veiculo("V1", capacidade_kg=50.0, autonomia_km=100.0)
-    
-    # Criar rota
-    rota = Rota(
-        veiculo=veiculo,
-        entregas=entregas,
-        sequencia=[base.localizacao] + [e.localizacao for e in entregas],
-        distancia_total_km=75.0,
-        carga_total_kg=30.0
-    )
-    
-    print(f"Base: {base}")
-    print(f"\nVeículo: {veiculo}")
-    print(f"\nEntregas:")
-    for entrega in entregas:
-        print(f"  {entrega}")
-    print(f"\n{rota}")
-    print(f"Rota válida? {rota.is_valida()}")
-    print(f"Custo: R$ {rota.custo_total():.2f}")
+        return (
+            f"Rota[{self.veiculo.id}] {status}: "
+            f"{len(self.entregas)} entregas, "
+            f"{self.distancia_total_km:.1f} km, "
+            f"{self.carga_total_kg:.1f} kg"
+        )
