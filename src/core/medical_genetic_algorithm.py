@@ -1,223 +1,479 @@
 """
-Algoritmo Genético adaptado para otimização de rotas médicas
-Baseado no código TSP original, com adição de restrições hospitalares
+Algoritmo Genético para otimização de rotas médicas.
+
+Este módulo implementa um Algoritmo Genético adaptado ao contexto
+hospitalar, utilizando:
+
+- Entrega, Veiculo, Base e Rota (modelos de domínio)
+- Distância geográfica (Haversine) em km
+- Penalidades por prioridade médica, capacidade e autonomia
+- Seleção por torneio, crossover OX e mutação por inversão
+- Elitismo e histórico de evolução do fitness
+
+Integração principal:
+- Leitura de veículos a partir de data/veiculos.csv
+- Leitura de entregas a partir de data/entregas.csv (gerado pelo script gerar_csv_entregas_rotas_iniciais.py)
 """
-import random
+
+from __future__ import annotations
+
 import math
-import copy
-from typing import List, Tuple
-from models import Entrega, Veiculo, Base, Rota, PrioridadeEntrega
+import random
+from dataclasses import dataclass
+from typing import List, Tuple, Sequence
 
+import pandas as pd
 
-def calculate_distance(point1: Tuple[float, float], point2: Tuple[float, float]) -> float:
-    """Calcula distância euclidiana entre dois pontos (pixels ou coordenadas)"""
-    return math.sqrt((point1[0] - point2[0]) ** 2 + (point1[1] - point2[1]) ** 2)
+from src.models.models import Entrega, Veiculo, Base, Rota, PrioridadeEntrega
+from src.models.base_default import BASE_PADRAO
 
+# =====================================================================
+# Utilitários de domínio e carregamento de dados
+# =====================================================================
 
-def calculate_route_metrics(sequencia: List[Tuple[float, float]], 
-                           entregas: List[Entrega],
-                           base: Base) -> Tuple[float, float, float]:
+def distancia_haversine_km(p1: Tuple[float, float], p2: Tuple[float, float]) -> float:
     """
-    Calcula métricas de uma rota
-    
-    Returns:
-        (distancia_total_pixels, distancia_total_km, tempo_total_min)
+    Calcula a distância aproximada em km entre dois pontos (lat, lon)
+    usando a fórmula de Haversine.
     """
-    # Adiciona base no início e fim da sequência
-    rota_completa = [base.localizacao] + sequencia + [base.localizacao]
-    
-    # Calcula distância em pixels
-    distancia_pixels = 0
-    for i in range(len(rota_completa) - 1):
-        distancia_pixels += calculate_distance(rota_completa[i], rota_completa[i + 1])
-    
-    # Conversão aproximada: 1 pixel = 0.1 km (ajustar conforme necessário)
-    PIXELS_TO_KM = 0.1
-    distancia_km = distancia_pixels * PIXELS_TO_KM
-    
-    # Tempo total: viagem + paradas
-    tempo_viagem = (distancia_km / 40) * 60  # 40 km/h em minutos
-    tempo_paradas = sum(e.tempo_estimado_entrega_min for e in entregas)
-    tempo_total = tempo_viagem + tempo_paradas
-    
-    return distancia_pixels, distancia_km, tempo_total
+    R = 6371.0  # raio médio da Terra em km
+
+    lat1, lon1 = map(math.radians, p1)
+    lat2, lon2 = map(math.radians, p2)
+
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+
+    a = (
+        math.sin(dlat / 2) ** 2
+        + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    )
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+    return R * c
 
 
-def calculate_fitness_with_constraints(sequencia: List[Tuple[float, float]],
-                                      entregas: List[Entrega],
-                                      veiculo: Veiculo,
-                                      base: Base) -> float:
+def carregar_veiculos_csv(path: str) -> List[Veiculo]:
     """
-    Calcula fitness considerando múltiplas restrições e objetivos
-    
-    Fitness = distância + penalidades
-    Quanto MENOR, melhor (problema de minimização)
+    Carrega veículos a partir de um CSV no formato:
+    id_veiculo, capacidade_kg, autonomia_km, velocidade_media_kmh, custo_por_km
     """
-    dist_pixels, dist_km, tempo_min = calculate_route_metrics(sequencia, entregas, base)
+    df = pd.read_csv(path)
+
+    esperadas = {
+        "id_veiculo",
+        "capacidade_kg",
+        "autonomia_km",
+        "velocidade_media_kmh",
+        "custo_por_km",
+    }
+    if not esperadas.issubset(df.columns):
+        raise ValueError(
+            f"Arquivo de veículos {path} não possui colunas esperadas: {esperadas}"
+        )
+
+    veiculos: List[Veiculo] = []
+    for _, row in df.iterrows():
+        veiculos.append(
+            Veiculo(
+                id_veiculo=str(row["id_veiculo"]),
+                capacidade_kg=float(row["capacidade_kg"]),
+                autonomia_km=float(row["autonomia_km"]),
+                velocidade_media_kmh=float(row["velocidade_media_kmh"]),
+                custo_por_km=float(row["custo_por_km"]),
+            )
+        )
+    return veiculos
+
+
+def carregar_entregas_csv(path: str) -> List[Entrega]:
+    """
+    Carrega entregas a partir de data/entregas.csv, gerado pelo script
+    gerar_csv_entregas_rotas_iniciais.py.
+
+    Formato esperado (colunas mínimas):
+        id, nome, lat, lng, prioridade, peso_kg, tempo_estimado_entrega_min
+
+    Obs.: Se existir coluna 'penalidade', ela é ignorada aqui, pois a
+    penalidade é derivada de PrioridadeEntrega.
+    """
+    df = pd.read_csv(path)
+
+    esperadas_minimas = {
+        "id",
+        "id_hospital",
+        "nome",
+        "lat",
+        "lng",
+        "prioridade",
+        "peso_kg",
+        "tempo_estimado_entrega_min",
+    }
+
+    if not esperadas_minimas.issubset(df.columns):
+        raise ValueError(
+            f"Arquivo de entregas {path} não possui colunas esperadas mínimas: {esperadas_minimas}"
+        )
     
-    fitness = dist_pixels  # Objetivo principal: minimizar distância
+    entregas: List[Entrega] = []
     
-    # PENALIDADE 1: Violação de capacidade
-    carga_total = sum(e.peso_kg for e in entregas)
-    if carga_total > veiculo.capacidade_kg:
-        excesso = carga_total - veiculo.capacidade_kg
-        fitness += excesso * 1000  # Penalidade severa
-    
-    # PENALIDADE 2: Violação de autonomia
-    if dist_km > veiculo.autonomia_km:
-        excesso = dist_km - veiculo.autonomia_km
-        fitness += excesso * 500
-    
-    # PENALIDADE 3: Prioridades não atendidas no início
-    # Entregas críticas devem ser feitas primeiro
-    peso_prioridade = 0
-    for i, loc in enumerate(sequencia[:len(entregas)]):
-        # Encontra a entrega correspondente
-        entrega = next((e for e in entregas if e.localizacao == loc), None)
-        if entrega:
-            # Quanto mais crítica e mais tarde na rota, maior a penalidade
-            if entrega.prioridade == PrioridadeEntrega.CRITICA:
-                peso_prioridade += i * 100
-            elif entrega.prioridade == PrioridadeEntrega.ALTA:
-                peso_prioridade += i * 50
-    
-    fitness += peso_prioridade
-    
+    for _, row in df.iterrows():
+        # Converte string ("CRITICA", "ALTA", etc.) para enum PrioridadeEntrega
+        prioridade_str = str(row["prioridade"]).upper().strip()
+        prioridade = PrioridadeEntrega[prioridade_str]
+
+        tempo_estimado = int(row["tempo_estimado_entrega_min"]) if "tempo_estimado_entrega_min" in df.columns else 15        
+
+        entregas.append(
+            Entrega(
+                id_entrega=int(row["id"]),
+                id_hospital=int(row["id_hospital"]),  # se quiser separar depois, pode vir de outra coluna
+                nome=str(row["nome"]),
+                localizacao=(float(row["lat"]), float(row["lng"])),
+                prioridade=prioridade,
+                peso_kg=float(row["peso_kg"]),
+                tempo_estimado_entrega_min=tempo_estimado,
+                janela_inicio=0,
+                janela_fim=1440,
+            )
+        )
+
+    return entregas
+
+
+# =====================================================================
+# Representação do indivíduo e métricas de rota
+# =====================================================================
+
+
+@dataclass
+class Individual:
+    """
+    Representa um indivíduo na população do GA.
+    O cromossomo é uma permutação dos índices das entregas.
+    """
+
+    ordem_entregas: List[int]  # índices na lista de entregas
+    fitness: float | None = None
+
+
+def calcular_metricas_rota(
+    ordem: Sequence[int], entregas: List[Entrega], base: Base, veiculo: Veiculo
+) -> Tuple[float, float, float, List[Tuple[float, float]]]:
+    """
+    Calcula:
+    - distância total em km
+    - tempo total em minutos (viagem + paradas)
+    - carga total em kg
+    - sequência de coordenadas visitadas
+
+    Considera:
+    - saída da base -> primeira entrega -> ... -> última entrega -> retorno à base
+    """
+    if not ordem:
+        return 0.0, 0.0, 0.0, [base.localizacao]
+
+    distancia_total_km = 0.0
+    tempo_total_min = 0.0
+    carga_total_kg = 0.0
+
+    seq_coords: List[Tuple[float, float]] = [base.localizacao]
+    ponto_anterior = base.localizacao
+
+    for idx in ordem:
+        entrega = entregas[idx]
+        ponto_atual = entrega.localizacao
+
+        dist_km = distancia_haversine_km(ponto_anterior, ponto_atual)
+        distancia_total_km += dist_km
+        tempo_total_min += veiculo.tempo_viagem_minutos(dist_km)
+        tempo_total_min += entrega.tempo_estimado_entrega_min
+        carga_total_kg += entrega.peso_kg
+
+        seq_coords.append(ponto_atual)
+        ponto_anterior = ponto_atual
+
+    # retorno à base (opcional, mas recomendado para cenário real)
+    dist_back = distancia_haversine_km(ponto_anterior, base.localizacao)
+    distancia_total_km += dist_back
+    tempo_total_min += veiculo.tempo_viagem_minutos(dist_back)
+    seq_coords.append(base.localizacao)
+
+    return distancia_total_km, tempo_total_min, carga_total_kg, seq_coords
+
+
+def calcular_fitness(
+    individuo: Individual, entregas: List[Entrega], veiculo: Veiculo, base: Base
+) -> float:
+    """
+    Função de fitness (minimização).
+
+    Componentes:
+    - custo operacional (distância_km * custo_por_km)
+    - penalidade por criticidade das entregas
+    - penalidade por excesso de carga
+    - penalidade por violar autonomia do veículo
+    """
+    ordem = individuo.ordem_entregas
+    distancia_km, tempo_min, carga_total_kg, _ = calcular_metricas_rota(
+        ordem, entregas, base, veiculo
+    )
+
+    # Custo operacional base
+    custo_operacional = distancia_km * veiculo.custo_por_km
+
+    # Penalidade por prioridade médica (todas as entregas da rota)
+    penalidade_prioridade = sum(
+        entregas[i].prioridade.peso_penalidade()
+        for i in ordem
+    )
+
+    fitness = custo_operacional + penalidade_prioridade
+
+    # Penalidade por excesso de carga
+    if carga_total_kg > veiculo.capacidade_kg:
+        excesso = carga_total_kg - veiculo.capacidade_kg
+        fitness += excesso * 1000.0  # penalidade forte
+
+    # Penalidade por violar autonomia
+    if distancia_km > veiculo.autonomia_km:
+        excesso = distancia_km - veiculo.autonomia_km
+        fitness += excesso * 500.0  # penalidade forte
+
+    # (Opcional futuro) penalidade por janelas de tempo
+
+    individuo.fitness = fitness
     return fitness
 
 
-def generate_random_population(entregas: List[Entrega], 
-                              population_size: int) -> List[List[Tuple[float, float]]]:
+# =====================================================================
+# Operadores Genéticos: população, seleção, crossover, mutação
+# =====================================================================
+
+
+def gerar_populacao_inicial(
+    num_individuos: int, num_entregas: int
+) -> List[Individual]:
     """
-    Gera população inicial de rotas
-    Mantém compatibilidade com código original (usa localizações)
+    Gera uma população inicial de permutações.
+
+    Simples: permutações aleatórias.
+    Pode ser refinado com viés por prioridade depois.
     """
-    localizacoes = [e.localizacao for e in entregas]
-    return [random.sample(localizacoes, len(localizacoes)) for _ in range(population_size)]
+    base_indices = list(range(num_entregas))
+    populacao: List[Individual] = []
+
+    for _ in range(num_individuos):
+        ordem = base_indices[:]
+        random.shuffle(ordem)
+        populacao.append(Individual(ordem_entregas=ordem))
+
+    return populacao
 
 
-def generate_priority_biased_population(entregas: List[Entrega], 
-                                       population_size: int) -> List[List[Tuple[float, float]]]:
+def selecao_torneio(
+    populacao: List[Individual], k: int = 3
+) -> Individual:
     """
-    Gera população inicial com viés para prioridades
-    50% da população começa com entregas críticas primeiro
+    Seleção por torneio: escolhe k indivíduos aleatórios e retorna o melhor.
     """
-    population = []
-    localizacoes = [e.localizacao for e in entregas]
-    
-    for i in range(population_size):
-        if i < population_size // 2:
-            # Metade com viés de prioridade
-            sorted_entregas = sorted(entregas, key=lambda e: e.prioridade.value)
-            sequencia = [e.localizacao for e in sorted_entregas]
-            # Adiciona alguma aleatoriedade
-            if len(sequencia) > 2:
-                idx1 = random.randint(len(sequencia)//2, len(sequencia)-1)
-                idx2 = random.randint(len(sequencia)//2, len(sequencia)-1)
-                sequencia[idx1], sequencia[idx2] = sequencia[idx2], sequencia[idx1]
-            population.append(sequencia)
-        else:
-            # Metade completamente aleatória
-            population.append(random.sample(localizacoes, len(localizacoes)))
-    
-    return population
+    escolhidos = random.sample(populacao, k)
+    escolhido = min(escolhidos, key=lambda ind: ind.fitness if ind.fitness is not None else float("inf"))
+    return escolhido
 
 
-def order_crossover(parent1: List[Tuple[float, float]], 
-                   parent2: List[Tuple[float, float]]) -> List[Tuple[float, float]]:
-    """Order Crossover (OX) - mantido do código original"""
-    length = len(parent1)
-    
-    start_index = random.randint(0, length - 1)
-    end_index = random.randint(start_index + 1, length)
-    
-    child = parent1[start_index:end_index]
-    
-    remaining_positions = [i for i in range(length) if i < start_index or i >= end_index]
-    remaining_genes = [gene for gene in parent2 if gene not in child]
-    
-    for position, gene in zip(remaining_positions, remaining_genes):
-        child.insert(position, gene)
-    
-    return child
-
-
-def mutate(solution: List[Tuple[float, float]], 
-          mutation_probability: float) -> List[Tuple[float, float]]:
+def order_crossover(parent1: Individual, parent2: Individual) -> Tuple[Individual, Individual]:
     """
-    Mutação por swap de posições adjacentes
-    Mantido do código original
+    Order Crossover (OX) clássico para permutações.
+
+    - Seleciona um segmento do pai 1 e o copia para o filho
+    - Preenche o restante na ordem em que aparecem no pai 2
     """
-    mutated_solution = copy.deepcopy(solution)
-    
-    if random.random() < mutation_probability:
-        if len(solution) < 2:
-            return solution
-        
-        index = random.randint(0, len(solution) - 2)
-        mutated_solution[index], mutated_solution[index + 1] = \
-            solution[index + 1], solution[index]
-    
-    return mutated_solution
+    p1 = parent1.ordem_entregas
+    p2 = parent2.ordem_entregas
+    n = len(p1)
+
+    if n < 2:
+        return Individual(p1[:]), Individual(p2[:])
+
+    i, j = sorted(random.sample(range(n), 2))
+    # Segmento do pai 1
+    segmento = p1[i:j]
+
+    def construir_filho(seg: List[int], p_seg: Sequence[int]) -> List[int]:
+        filho = [None] * n  # type: ignore
+        # Copia segmento
+        filho[i:j] = seg
+        pos = j
+        for gene in p_seg:
+            if gene in seg:
+                continue
+            if pos >= n:
+                pos = 0
+            filho[pos] = gene
+            pos += 1
+        # type: ignore
+        return filho  # type: ignore
+
+    filho1_ordem = construir_filho(segmento, p2)
+    filho2_ordem = construir_filho(segmento, p1)
+
+    return Individual(filho1_ordem), Individual(filho2_ordem)
 
 
-def mutate_inversion(solution: List[Tuple[float, float]], 
-                    mutation_probability: float) -> List[Tuple[float, float]]:
+def mutacao_inversao(individuo: Individual, taxa_mutacao: float) -> None:
     """
-    Mutação por inversão de segmento (mais agressiva)
-    NOVA: útil para escapar de mínimos locais
+    Mutação por inversão: escolhe um segmento e inverte a ordem dos genes.
     """
-    mutated_solution = copy.deepcopy(solution)
-    
-    if random.random() < mutation_probability:
-        if len(solution) < 3:
-            return solution
-        
-        # Seleciona um segmento para inverter
-        start = random.randint(0, len(solution) - 3)
-        end = random.randint(start + 2, len(solution))
-        
-        # Inverte o segmento
-        mutated_solution[start:end] = reversed(mutated_solution[start:end])
-    
-    return mutated_solution
+    if random.random() > taxa_mutacao:
+        return
+
+    ordem = individuo.ordem_entregas
+    n = len(ordem)
+    if n < 2:
+        return
+
+    i, j = sorted(random.sample(range(n), 2))
+    ordem[i:j] = reversed(ordem[i:j])
 
 
-def sort_population(population: List[List[Tuple[float, float]]], 
-                   fitness: List[float]) -> Tuple[List[List[Tuple[float, float]]], List[float]]:
-    """Ordena população por fitness (mantido do original)"""
-    combined = list(zip(population, fitness))
-    sorted_combined = sorted(combined, key=lambda x: x[1])
-    sorted_population, sorted_fitness = zip(*sorted_combined)
-    return list(sorted_population), list(sorted_fitness)
+# =====================================================================
+# Execução do Algoritmo Genético
+# =====================================================================
 
 
-# Exemplo de uso
-if __name__ == '__main__':
-    from models import Base, Veiculo, PrioridadeEntrega
-    
-    # Setup
-    base = Base((400, 200), "Hospital Base")
-    veiculo = Veiculo("V1", capacidade_kg=50.0, autonomia_km=100.0)
-    
-    # Entregas de exemplo
-    entregas = [
-        Entrega(1, (450, 250), "UBS 1", PrioridadeEntrega.CRITICA, 5.0),
-        Entrega(2, (500, 150), "Clínica 2", PrioridadeEntrega.ALTA, 10.0),
-        Entrega(3, (350, 300), "PSF 3", PrioridadeEntrega.MEDIA, 15.0),
-        Entrega(4, (550, 200), "UPA 4", PrioridadeEntrega.BAIXA, 8.0),
-    ]
-    
-    # Testa geração de população
-    pop = generate_priority_biased_population(entregas, 10)
-    print(f"População gerada: {len(pop)} indivíduos")
-    
-    # Testa fitness
-    sequencia_teste = [e.localizacao for e in entregas]
-    fitness = calculate_fitness_with_constraints(sequencia_teste, entregas, veiculo, base)
-    print(f"\nFitness da sequência teste: {fitness:.2f}")
-    
-    # Testa mutação
-    mutated = mutate_inversion(sequencia_teste, 1.0)
-    print(f"\nOriginal:  {sequencia_teste}")
-    print(f"Mutado:    {mutated}")
+@dataclass
+class GAConfig:
+    tamanho_populacao: int = 100
+    geracoes: int = 200
+    taxa_mutacao: float = 0.1
+    elitismo: float = 0.1  # proporção de indivíduos mantidos (0.0–0.5)
+
+
+def executar_ga_para_veiculo(
+    entregas: List[Entrega],
+    veiculo: Veiculo,
+    base: Base,
+    config: GAConfig | None = None,
+) -> Tuple[Rota, List[float]]:
+    """
+    Executa o GA para otimizar a rota de UM veículo atendendo TODAS as entregas.
+
+    Retorna:
+    - Rota com melhor solução encontrada
+    - lista com o melhor fitness de cada geração (para gráficos/análise)
+    """
+    if config is None:
+        config = GAConfig()
+
+    num_entregas = len(entregas)
+    if num_entregas == 0:
+        raise ValueError("Não há entregas para otimizar.")
+
+    # População inicial
+    populacao = gerar_populacao_inicial(config.tamanho_populacao, num_entregas)
+
+    melhor_fitness_por_geracao: List[float] = []
+    melhor_individuo_global: Individual | None = None
+
+    # Avaliação inicial
+    for ind in populacao:
+        calcular_fitness(ind, entregas, veiculo, base)
+
+    for gen in range(config.geracoes):
+        # Ordena por fitness (menor é melhor)
+        populacao.sort(key=lambda ind: ind.fitness if ind.fitness is not None else float("inf"))
+
+        melhor_geracao = populacao[0]
+        melhor_fitness_por_geracao.append(melhor_geracao.fitness or float("inf"))
+
+        if melhor_individuo_global is None or (melhor_geracao.fitness or float("inf")) < (melhor_individuo_global.fitness or float("inf")):
+            melhor_individuo_global = Individual(
+                ordem_entregas=melhor_geracao.ordem_entregas[:],
+                fitness=melhor_geracao.fitness,
+            )
+
+        # Elitismo
+        num_elite = max(1, int(config.elitismo * config.tamanho_populacao))
+        novos_individuos: List[Individual] = [
+            Individual(ind.ordem_entregas[:], ind.fitness)
+            for ind in populacao[:num_elite]
+        ]
+
+        # Geração de novos indivíduos
+        while len(novos_individuos) < config.tamanho_populacao:
+            pai1 = selecao_torneio(populacao)
+            pai2 = selecao_torneio(populacao)
+            filho1, filho2 = order_crossover(pai1, pai2)
+
+            mutacao_inversao(filho1, config.taxa_mutacao)
+            mutacao_inversao(filho2, config.taxa_mutacao)
+
+            calcular_fitness(filho1, entregas, veiculo, base)
+            calcular_fitness(filho2, entregas, veiculo, base)
+
+            novos_individuos.append(filho1)
+            if len(novos_individuos) < config.tamanho_populacao:
+                novos_individuos.append(filho2)
+
+        populacao = novos_individuos
+
+    # Melhor indivíduo global
+    assert melhor_individuo_global is not None
+    melhor_ordem = melhor_individuo_global.ordem_entregas
+
+    distancia_km, tempo_min, carga_total_kg, seq_coords = calcular_metricas_rota(
+        melhor_ordem, entregas, base, veiculo
+    )
+
+    melhor_entregas = [entregas[i] for i in melhor_ordem]
+
+    rota = Rota(
+        veiculo=veiculo,
+        entregas=melhor_entregas,
+        sequencia=seq_coords,
+        distancia_total_km=distancia_km,
+        tempo_total_min=tempo_min,
+    )
+
+    return rota, melhor_fitness_por_geracao
+
+
+# =====================================================================
+# Bloco de teste rápido (opcional, para desenvolvimento)
+# =====================================================================
+
+if __name__ == "__main__":
+    """
+    Execução rápida de teste do GA usando:
+
+    - data/veiculos.csv
+    - data/entregas.csv
+
+    Este bloco não deve ser usado em produção, apenas para inspeção manual.
+    """
+    base = BASE_PADRAO
+    entregas = carregar_entregas_csv("data/entregas.csv")
+    veiculos = carregar_veiculos_csv("data/veiculos.csv")
+
+    veiculo = veiculos[0]  # testa com o primeiro veículo
+
+    config = GAConfig(
+        tamanho_populacao=50,
+        geracoes=50,
+        taxa_mutacao=0.2,
+        elitismo=0.1,
+    )
+
+    melhor_rota, historico = executar_ga_para_veiculo(
+        entregas=entregas,
+        veiculo=veiculo,
+        base=base,
+        config=config,
+    )
+
+    print(f"Melhor rota para o veículo {veiculo.id_veiculo}:")
+    print(melhor_rota)
+    print(f"Melhor fitness final: {historico[-1]:.2f}")
+    print(f"Distância total: {melhor_rota.distancia_total_km:.2f} km")
+    print(f"Carga total: {melhor_rota.carga_total_kg:.2f} kg")
