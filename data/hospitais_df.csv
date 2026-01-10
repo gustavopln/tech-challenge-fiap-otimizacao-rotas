@@ -1,0 +1,101 @@
+IdHospital,Nome,Latitude,Longitude
+1,Hospital de Base do Distrito Federal (IHBDF),-15.7997,-47.8837
+2,Hospital Regional da Asa Norte (HRAN),-15.7834,-47.8845
+3,Hospital Universitário de Brasília (HUB),-15.7672,-47.8724
+4,Hospital Materno Infantil de Brasília (HMIB),-15.8153,-47.9015
+5,Hospital Regional de Taguatinga (HRT),-15.8247,-48.0588
+6,Hospital Regional de Ceilândia (HRC),-15.8201,-48.1121
+7,Hospital Regional do Gama (HRG),-16.0210,-48.0650
+8,Hospital Regional de Sobradinho (HRS),-15.6534,-47.7891
+9,Hospital Regional de Planaltina (HRPL),-15.6131,-47.6521
+10,Hospital Regional de Samambaia (HRSAM),-15.8902,-48.0903
+11,Hospital Regional de Santa Maria (HRSM),-16.0154,-48.0123
+12,Hospital Regional de Brazlândia (HRBZ),-15.6698,-48.1985
+13,Hospital Regional do Paranoá (HRP),-15.7721,-47.7785
+14,Hospital Regional do Guará (HRGU),-15.8174,-47.9781
+15,Hospital de Apoio de Brasília (HAB),-15.7531,-47.9012
+16,Hospital da Criança de Brasília (HCB),-15.7512,-47.9034
+17,Hospital São Vicente de Paulo (HSVP),-15.8341,-48.0552
+18,Hospital das Forças Armadas (HFA),-15.8154,-47.9251
+19,Hospital de Força Aérea de Brasília (HFAB),-15.7321,-47.8921
+20,Hospital Militar de Área de Brasília (HMAB),-15.7901,-47.9234
+21,Hospital Naval de Brasília,-15.7645,-47.8712
+22,Hospital Brasília (Lago Sul),-15.8341,-47.8727
+23,Hospital Brasília (Águas Claras),-15.8421,-48.0214
+24,Hospital Santa Lúcia (Asa Sul),-15.8203,-47.9103
+25,Hospital Santa Lúcia (Asa Norte),-15.7612,-47.8845
+26,Hospital Santa Lúcia (Taguatinga),-15.8321,-48.0556
+27,Hospital Santa Luzia,-15.8212,-47.9123
+28,Hospital Santa Helena,-15.7634,-47.8812
+29,Hospital Santa Marta (Taguatinga),-15.8521,-48.0432
+30,Hospital Anchieta (Taguatinga),-15.8198,-48.0654
+31,Hospital Daher (Lago Sul),-15.8234,-47.8654
+32,Hospital Alvorada (Asa Sul),-15.8187,-47.9054
+33,Hospital Prontonorte,-15.7612,-47.8856
+34,Hospital São Mateus (Cruzeiro),-15.7921,-47.9341
+35,Hospital Maria Auxiliadora (Gama),-16.0187,-48.0678
+36,Hospital Home (Asa Sul),-15.8256,-47.9134
+37,DF Star (Asa Sul),-15.8211,-47.9112
+38,Hospital Águas Claras,-15.8387,-48.0254
+39,Hospital São Francisco (Ceilândia),-15.8112,-48.1054
+40,Hospital de Clínicas de Brasília,-15.8154,-47.9098
+41,UPA Ceilândia I,-15.8256,-48.1212
+42,UPA Ceilândia II,-15.8543,-48.1345
+43,UPA Recanto das Emas,-15.8987,-48.0654
+44,UPA Samambaia,-15.8821,-48.1132
+45,UPA Sobradinho,-15.6612,-47.7854
+46,UPA São Sebastião,-15.8912,-47.7712
+47,UPA Núcleo Bandeirante,-15.8754,-47.9612
+48,UPA Vicente Pires,-15.8012,-48.0234
+49,UPA Planaltina,-15.6234,-47.6612
+50,UPA Gama,-16.0256,-48.0712
+51,Policlínica de Taguatinga,-15.8312,-48.0512
+52,Policlínica de Ceilândia,-15.8212,-48.1145
+53,Policlínica do Paranoá,-15.7754,-47.7812
+54,Policlínica do Guará,-15.8187,-47.9812
+55,Policlínica de Planaltina,-15.6154,-47.6543
+56,Hospital Sarah Kubitschek (Asa Sul),-15.8034,-47.8921
+57,Hospital Sarah Kubitschek (Lago Norte),-15.7312,-47.8643
+58,Instituto de Cardiologia do DF (ICDF),-15.7954,-47.9123
+59,Hospital Veterinário de Brasília (HVEP),-15.7943,-48.0212
+60,Centro de Saúde 01 Asa Sul,-15.8123,-47.8945
+61,Centro de Saúde 02 Asa Sul,-15.8156,-47.9012
+62,Centro de Saúde 01 Asa Norte,-15.7743,-47.8812
+63,Centro de Saúde 03 Asa Norte,-15.7654,-47.8912
+64,Hospital MedSenior,-15.8198,-47.9156
+65,Hospital Sírio-Libanês (Brasília),-15.8234,-47.9132
+66,Hospital Life Center,-15.8254,-47.9145
+67,Hospital Coração do Brasil,-15.8212,-47.9187
+68,Hospital Metropolitano,-15.8343,-48.0532
+69,Centro Clínico Advance,-15.8201,-47.9154
+70,Hospital de Olhos CBV,-15.8265,-47.9212
+71,Hospital de Olhos Dr. Ricardo Guimarães,-15.8312,-47.9054
+72,Hospital do Coração de Taguatinga,-15.8345,-48.0512
+73,Instituto de Câncer de Brasília,-15.8234,-47.9112
+74,Centro Radiológico de Brasília,-15.8201,-47.9101
+75,Hospital Ortopédico de Brasília (HOBS),-15.8212,-47.9143
+76,Unidade de Pronto Atendimento Riacho Fundo II,-15.9012,-48.0432
+77,UBS 01 Santa Maria,-16.0123,-48.0145
+78,UBS 02 Santa Maria,-16.0187,-48.0098
+79,UBS 01 São Sebastião,-15.8943,-47.7754
+80,UBS 01 Recanto das Emas,-15.9012,-48.0612
+81,UBS 01 Estrutural,-15.7843,-47.9812
+82,UBS 01 Varjão,-15.7234,-47.8745
+83,UBS 01 Itapoã,-15.7512,-47.7654
+84,UBS 01 Jardim Botânico,-15.8543,-47.8212
+85,UBS 01 Sudoeste,-15.7987,-47.9212
+86,UBS 01 Cruzeiro,-15.7912,-47.9354
+87,UBS 02 Cruzeiro,-15.7845,-47.9412
+88,UBS 01 Candangolândia,-15.8512,-47.9512
+89,UBS 01 Núcleo Bandeirante,-15.8712,-47.9654
+90,UBS 01 Riacho Fundo I,-15.8812,-47.9912
+91,UBS 01 Park Way,-15.8943,-47.9612
+92,UBS 01 Águas Claras,-15.8412,-48.0312
+93,UBS 01 Vicente Pires,-15.8043,-48.0154
+94,UBS 01 Fercal,-15.6012,-47.8612
+95,UBS 01 Sobradinho II,-15.6412,-47.8012
+96,UBS 02 Sobradinho,-15.6543,-47.7912
+97,UBS 01 Planaltina (Vila Buritis),-15.6212,-47.6512
+98,UBS 02 Planaltina,-15.6187,-47.6612
+99,UBS 01 Paranoá,-15.7712,-47.7843
+100,UBS 01 Lago Norte,-15.7412,-47.8812
