@@ -1,0 +1,4955 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e8fd9543a0adc4fc5e2815b8339132ec {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e8fd9543a0adc4fc5e2815b8339132ec" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e8fd9543a0adc4fc5e2815b8339132ec = L.map(
+                "map_e8fd9543a0adc4fc5e2815b8339132ec",
+                {
+                    center: [-15.8140447, -47.9659546],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6b640c515689379339c2d7b93750a0b5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6b640c515689379339c2d7b93750a0b5.addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var marker_2a39e36fbd6c3b52ed349a3010b8e4b4 = L.marker(
+                [-15.7997, -47.8837],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_9682feacea4828fcb46e86485018e12d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d940dce3265cfda131df0d95924545e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aeb4c421c6d72af51f75c2dad9b97dcf = $(`<div id="html_aeb4c421c6d72af51f75c2dad9b97dcf" style="width: 100.0%; height: 100.0%;">Hospital de Base do Distrito Federal (IHBDF)</div>`)[0];
+                popup_d940dce3265cfda131df0d95924545e1.setContent(html_aeb4c421c6d72af51f75c2dad9b97dcf);
+            
+        
+
+        marker_2a39e36fbd6c3b52ed349a3010b8e4b4.bindPopup(popup_d940dce3265cfda131df0d95924545e1)
+        ;
+
+        
+    
+    
+            marker_2a39e36fbd6c3b52ed349a3010b8e4b4.bindTooltip(
+                `<div>
+                     Hospital de Base do Distrito Federal (IHBDF)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a39e36fbd6c3b52ed349a3010b8e4b4.setIcon(icon_9682feacea4828fcb46e86485018e12d);
+            
+    
+            var marker_6b8b3cf34fde3e155a40c54b2ce4b399 = L.marker(
+                [-15.7834, -47.8845],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_275c2492932146958f06912111ab026a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46ec9fac7a031ffa8d9769a4918430ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_245896060a826c438aa58cb7031e410e = $(`<div id="html_245896060a826c438aa58cb7031e410e" style="width: 100.0%; height: 100.0%;">Hospital Regional da Asa Norte (HRAN)</div>`)[0];
+                popup_46ec9fac7a031ffa8d9769a4918430ba.setContent(html_245896060a826c438aa58cb7031e410e);
+            
+        
+
+        marker_6b8b3cf34fde3e155a40c54b2ce4b399.bindPopup(popup_46ec9fac7a031ffa8d9769a4918430ba)
+        ;
+
+        
+    
+    
+            marker_6b8b3cf34fde3e155a40c54b2ce4b399.bindTooltip(
+                `<div>
+                     Hospital Regional da Asa Norte (HRAN)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b8b3cf34fde3e155a40c54b2ce4b399.setIcon(icon_275c2492932146958f06912111ab026a);
+            
+    
+            var marker_4e98ce25e16cba3cc0e2d9b1541f4c75 = L.marker(
+                [-15.7672, -47.8724],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_5637cbf4b81e89df2fd8f2b03a249bd5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b2c5555468933b4480bb695ff24f7ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e8fa1d58d9a953f07e6595c77b5e527 = $(`<div id="html_5e8fa1d58d9a953f07e6595c77b5e527" style="width: 100.0%; height: 100.0%;">Hospital Universitário de Brasília (HUB)</div>`)[0];
+                popup_7b2c5555468933b4480bb695ff24f7ca.setContent(html_5e8fa1d58d9a953f07e6595c77b5e527);
+            
+        
+
+        marker_4e98ce25e16cba3cc0e2d9b1541f4c75.bindPopup(popup_7b2c5555468933b4480bb695ff24f7ca)
+        ;
+
+        
+    
+    
+            marker_4e98ce25e16cba3cc0e2d9b1541f4c75.bindTooltip(
+                `<div>
+                     Hospital Universitário de Brasília (HUB)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e98ce25e16cba3cc0e2d9b1541f4c75.setIcon(icon_5637cbf4b81e89df2fd8f2b03a249bd5);
+            
+    
+            var marker_2166942cd3c82084bf29ad86a7bc6915 = L.marker(
+                [-15.8153, -47.9015],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f5f864415b4305f382040d25faecebf5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_088168b812498a335f579b2e18389d52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_540b64b3b2493d60ea903eecb14940e9 = $(`<div id="html_540b64b3b2493d60ea903eecb14940e9" style="width: 100.0%; height: 100.0%;">Hospital Materno Infantil de Brasília (HMIB)</div>`)[0];
+                popup_088168b812498a335f579b2e18389d52.setContent(html_540b64b3b2493d60ea903eecb14940e9);
+            
+        
+
+        marker_2166942cd3c82084bf29ad86a7bc6915.bindPopup(popup_088168b812498a335f579b2e18389d52)
+        ;
+
+        
+    
+    
+            marker_2166942cd3c82084bf29ad86a7bc6915.bindTooltip(
+                `<div>
+                     Hospital Materno Infantil de Brasília (HMIB)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2166942cd3c82084bf29ad86a7bc6915.setIcon(icon_f5f864415b4305f382040d25faecebf5);
+            
+    
+            var marker_d3bfb02f876c18cca8f42f2d01137030 = L.marker(
+                [-15.8247, -48.0588],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_6ee8bac5dcde135e978c1024411e9068 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41f02227fb97d287535d16b4011ec77a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d173d516fa280157a5209dbd0c831a79 = $(`<div id="html_d173d516fa280157a5209dbd0c831a79" style="width: 100.0%; height: 100.0%;">Hospital Regional de Taguatinga (HRT)</div>`)[0];
+                popup_41f02227fb97d287535d16b4011ec77a.setContent(html_d173d516fa280157a5209dbd0c831a79);
+            
+        
+
+        marker_d3bfb02f876c18cca8f42f2d01137030.bindPopup(popup_41f02227fb97d287535d16b4011ec77a)
+        ;
+
+        
+    
+    
+            marker_d3bfb02f876c18cca8f42f2d01137030.bindTooltip(
+                `<div>
+                     Hospital Regional de Taguatinga (HRT)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3bfb02f876c18cca8f42f2d01137030.setIcon(icon_6ee8bac5dcde135e978c1024411e9068);
+            
+    
+            var marker_579c6d87ac98967460f6d74c6fb7c416 = L.marker(
+                [-15.8201, -48.1121],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f58c820151a9748b0b4b2ea829732999 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a89335668460b585629a98f6e8e508f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5daf90a1b0b0971c4ba4e0707092f42 = $(`<div id="html_c5daf90a1b0b0971c4ba4e0707092f42" style="width: 100.0%; height: 100.0%;">Hospital Regional de Ceilândia (HRC)</div>`)[0];
+                popup_a89335668460b585629a98f6e8e508f1.setContent(html_c5daf90a1b0b0971c4ba4e0707092f42);
+            
+        
+
+        marker_579c6d87ac98967460f6d74c6fb7c416.bindPopup(popup_a89335668460b585629a98f6e8e508f1)
+        ;
+
+        
+    
+    
+            marker_579c6d87ac98967460f6d74c6fb7c416.bindTooltip(
+                `<div>
+                     Hospital Regional de Ceilândia (HRC)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_579c6d87ac98967460f6d74c6fb7c416.setIcon(icon_f58c820151a9748b0b4b2ea829732999);
+            
+    
+            var marker_1f8ea309ba81484ce4a6b9fb426de23e = L.marker(
+                [-16.021, -48.065],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_8854f3f7d5d7b938f7da16ffeec62b1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9501c3ad44ce79ebac2a08074da1b89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fe90ecffe630102c99b46eea12322b5 = $(`<div id="html_6fe90ecffe630102c99b46eea12322b5" style="width: 100.0%; height: 100.0%;">Hospital Regional do Gama (HRG)</div>`)[0];
+                popup_e9501c3ad44ce79ebac2a08074da1b89.setContent(html_6fe90ecffe630102c99b46eea12322b5);
+            
+        
+
+        marker_1f8ea309ba81484ce4a6b9fb426de23e.bindPopup(popup_e9501c3ad44ce79ebac2a08074da1b89)
+        ;
+
+        
+    
+    
+            marker_1f8ea309ba81484ce4a6b9fb426de23e.bindTooltip(
+                `<div>
+                     Hospital Regional do Gama (HRG)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f8ea309ba81484ce4a6b9fb426de23e.setIcon(icon_8854f3f7d5d7b938f7da16ffeec62b1c);
+            
+    
+            var marker_a4d2344997984c5d867b00d0300bcab0 = L.marker(
+                [-15.6534, -47.7891],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_8d1abcb2a7f20b8ecab585262c3dde37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5e1a8a04df552574e0cc38a1ea47e2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b302a9c5164d2ff64f98aa3fe51d48a2 = $(`<div id="html_b302a9c5164d2ff64f98aa3fe51d48a2" style="width: 100.0%; height: 100.0%;">Hospital Regional de Sobradinho (HRS)</div>`)[0];
+                popup_e5e1a8a04df552574e0cc38a1ea47e2e.setContent(html_b302a9c5164d2ff64f98aa3fe51d48a2);
+            
+        
+
+        marker_a4d2344997984c5d867b00d0300bcab0.bindPopup(popup_e5e1a8a04df552574e0cc38a1ea47e2e)
+        ;
+
+        
+    
+    
+            marker_a4d2344997984c5d867b00d0300bcab0.bindTooltip(
+                `<div>
+                     Hospital Regional de Sobradinho (HRS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a4d2344997984c5d867b00d0300bcab0.setIcon(icon_8d1abcb2a7f20b8ecab585262c3dde37);
+            
+    
+            var marker_2072490e93f71d66fdbd67ea93095e52 = L.marker(
+                [-15.6131, -47.6521],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_19c6e116c9dedbea33b439b95f0a04e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47c7c73aac8717d8400c9ce6c5f8116e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_695b3e09382ff5672acff05488ebeb91 = $(`<div id="html_695b3e09382ff5672acff05488ebeb91" style="width: 100.0%; height: 100.0%;">Hospital Regional de Planaltina (HRPL)</div>`)[0];
+                popup_47c7c73aac8717d8400c9ce6c5f8116e.setContent(html_695b3e09382ff5672acff05488ebeb91);
+            
+        
+
+        marker_2072490e93f71d66fdbd67ea93095e52.bindPopup(popup_47c7c73aac8717d8400c9ce6c5f8116e)
+        ;
+
+        
+    
+    
+            marker_2072490e93f71d66fdbd67ea93095e52.bindTooltip(
+                `<div>
+                     Hospital Regional de Planaltina (HRPL)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2072490e93f71d66fdbd67ea93095e52.setIcon(icon_19c6e116c9dedbea33b439b95f0a04e0);
+            
+    
+            var marker_efcc47ce01134a4c788ff0a0e6991eee = L.marker(
+                [-15.8902, -48.0903],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_1583199035f522e184576eea9aada1c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e3a685dd76b513a3cc6b356cfaed91b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a4a34657b3d35e99fbeedbcba1a378e = $(`<div id="html_4a4a34657b3d35e99fbeedbcba1a378e" style="width: 100.0%; height: 100.0%;">Hospital Regional de Samambaia (HRSAM)</div>`)[0];
+                popup_5e3a685dd76b513a3cc6b356cfaed91b.setContent(html_4a4a34657b3d35e99fbeedbcba1a378e);
+            
+        
+
+        marker_efcc47ce01134a4c788ff0a0e6991eee.bindPopup(popup_5e3a685dd76b513a3cc6b356cfaed91b)
+        ;
+
+        
+    
+    
+            marker_efcc47ce01134a4c788ff0a0e6991eee.bindTooltip(
+                `<div>
+                     Hospital Regional de Samambaia (HRSAM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_efcc47ce01134a4c788ff0a0e6991eee.setIcon(icon_1583199035f522e184576eea9aada1c5);
+            
+    
+            var marker_9094b4fdd5c87c00246f09a2532d2749 = L.marker(
+                [-16.0154, -48.0123],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_53694913c83fbbfade34011d2da7ddfd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_877b6d9234e3f1b45324477a70274b0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_059031241e5153f250713235d70897ca = $(`<div id="html_059031241e5153f250713235d70897ca" style="width: 100.0%; height: 100.0%;">Hospital Regional de Santa Maria (HRSM)</div>`)[0];
+                popup_877b6d9234e3f1b45324477a70274b0f.setContent(html_059031241e5153f250713235d70897ca);
+            
+        
+
+        marker_9094b4fdd5c87c00246f09a2532d2749.bindPopup(popup_877b6d9234e3f1b45324477a70274b0f)
+        ;
+
+        
+    
+    
+            marker_9094b4fdd5c87c00246f09a2532d2749.bindTooltip(
+                `<div>
+                     Hospital Regional de Santa Maria (HRSM)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9094b4fdd5c87c00246f09a2532d2749.setIcon(icon_53694913c83fbbfade34011d2da7ddfd);
+            
+    
+            var marker_344635a7290c7f8bc8ad555d1b847d65 = L.marker(
+                [-15.6698, -48.1985],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_e555dccdcc69d8ac3e9e1679a8fe37a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3c86744044bb78a73e6ee1151841907 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c90eb82a2197bfaf83bb8b2f8fcf003f = $(`<div id="html_c90eb82a2197bfaf83bb8b2f8fcf003f" style="width: 100.0%; height: 100.0%;">Hospital Regional de Brazlândia (HRBZ)</div>`)[0];
+                popup_d3c86744044bb78a73e6ee1151841907.setContent(html_c90eb82a2197bfaf83bb8b2f8fcf003f);
+            
+        
+
+        marker_344635a7290c7f8bc8ad555d1b847d65.bindPopup(popup_d3c86744044bb78a73e6ee1151841907)
+        ;
+
+        
+    
+    
+            marker_344635a7290c7f8bc8ad555d1b847d65.bindTooltip(
+                `<div>
+                     Hospital Regional de Brazlândia (HRBZ)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_344635a7290c7f8bc8ad555d1b847d65.setIcon(icon_e555dccdcc69d8ac3e9e1679a8fe37a7);
+            
+    
+            var marker_a1b239ca60b421b5f04fdc2e8dea1fbf = L.marker(
+                [-15.7721, -47.7785],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_0bc8a47491d41e6759809a8c1e251de4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_adb508acde820eb4955f52417dab060e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5bdadff0ad94a8873a087933667d14b = $(`<div id="html_d5bdadff0ad94a8873a087933667d14b" style="width: 100.0%; height: 100.0%;">Hospital Regional do Paranoá (HRP)</div>`)[0];
+                popup_adb508acde820eb4955f52417dab060e.setContent(html_d5bdadff0ad94a8873a087933667d14b);
+            
+        
+
+        marker_a1b239ca60b421b5f04fdc2e8dea1fbf.bindPopup(popup_adb508acde820eb4955f52417dab060e)
+        ;
+
+        
+    
+    
+            marker_a1b239ca60b421b5f04fdc2e8dea1fbf.bindTooltip(
+                `<div>
+                     Hospital Regional do Paranoá (HRP)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1b239ca60b421b5f04fdc2e8dea1fbf.setIcon(icon_0bc8a47491d41e6759809a8c1e251de4);
+            
+    
+            var marker_0aa458cf74ba3298a648254b86523e3d = L.marker(
+                [-15.8174, -47.9781],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_711064d53d6d01d2f8df6355b0c7e7c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_828c59f3d821ffe244ce5a73d255f406 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25d8a0550dfe03a44294b08649a36c21 = $(`<div id="html_25d8a0550dfe03a44294b08649a36c21" style="width: 100.0%; height: 100.0%;">Hospital Regional do Guará (HRGU)</div>`)[0];
+                popup_828c59f3d821ffe244ce5a73d255f406.setContent(html_25d8a0550dfe03a44294b08649a36c21);
+            
+        
+
+        marker_0aa458cf74ba3298a648254b86523e3d.bindPopup(popup_828c59f3d821ffe244ce5a73d255f406)
+        ;
+
+        
+    
+    
+            marker_0aa458cf74ba3298a648254b86523e3d.bindTooltip(
+                `<div>
+                     Hospital Regional do Guará (HRGU)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0aa458cf74ba3298a648254b86523e3d.setIcon(icon_711064d53d6d01d2f8df6355b0c7e7c6);
+            
+    
+            var marker_337fb6200a6aeb8f7dc5c1d241db1010 = L.marker(
+                [-15.7531, -47.9012],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_884ccd320452a90bf04c772c2efa297c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2023edb78de7981806ad2d4edb994c63 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18e047cf33a94126cc6db82c5c30ef68 = $(`<div id="html_18e047cf33a94126cc6db82c5c30ef68" style="width: 100.0%; height: 100.0%;">Hospital de Apoio de Brasília (HAB)</div>`)[0];
+                popup_2023edb78de7981806ad2d4edb994c63.setContent(html_18e047cf33a94126cc6db82c5c30ef68);
+            
+        
+
+        marker_337fb6200a6aeb8f7dc5c1d241db1010.bindPopup(popup_2023edb78de7981806ad2d4edb994c63)
+        ;
+
+        
+    
+    
+            marker_337fb6200a6aeb8f7dc5c1d241db1010.bindTooltip(
+                `<div>
+                     Hospital de Apoio de Brasília (HAB)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_337fb6200a6aeb8f7dc5c1d241db1010.setIcon(icon_884ccd320452a90bf04c772c2efa297c);
+            
+    
+            var marker_284661373e47b721a47b449ba929bfe9 = L.marker(
+                [-15.7512, -47.9034],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_cd0f6f650e7ed84af727eaba13edcdb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae6049ba02c82620ee6076a230974c62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e353bcac13f89bd2a5f01832b4455ca = $(`<div id="html_4e353bcac13f89bd2a5f01832b4455ca" style="width: 100.0%; height: 100.0%;">Hospital da Criança de Brasília (HCB)</div>`)[0];
+                popup_ae6049ba02c82620ee6076a230974c62.setContent(html_4e353bcac13f89bd2a5f01832b4455ca);
+            
+        
+
+        marker_284661373e47b721a47b449ba929bfe9.bindPopup(popup_ae6049ba02c82620ee6076a230974c62)
+        ;
+
+        
+    
+    
+            marker_284661373e47b721a47b449ba929bfe9.bindTooltip(
+                `<div>
+                     Hospital da Criança de Brasília (HCB)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_284661373e47b721a47b449ba929bfe9.setIcon(icon_cd0f6f650e7ed84af727eaba13edcdb6);
+            
+    
+            var marker_11269a65855bbf35ecaaadb39e360707 = L.marker(
+                [-15.8341, -48.0552],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_33f6c76a3960620fafb364a28ccff7ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f81d6764e1d60f25be3c1776844834f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08a14a3457886a6d97522875245868a6 = $(`<div id="html_08a14a3457886a6d97522875245868a6" style="width: 100.0%; height: 100.0%;">Hospital São Vicente de Paulo (HSVP)</div>`)[0];
+                popup_f81d6764e1d60f25be3c1776844834f0.setContent(html_08a14a3457886a6d97522875245868a6);
+            
+        
+
+        marker_11269a65855bbf35ecaaadb39e360707.bindPopup(popup_f81d6764e1d60f25be3c1776844834f0)
+        ;
+
+        
+    
+    
+            marker_11269a65855bbf35ecaaadb39e360707.bindTooltip(
+                `<div>
+                     Hospital São Vicente de Paulo (HSVP)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_11269a65855bbf35ecaaadb39e360707.setIcon(icon_33f6c76a3960620fafb364a28ccff7ae);
+            
+    
+            var marker_a68642b69130a12d753f2c7487371f6e = L.marker(
+                [-15.8154, -47.9251],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_76db0615ac08eb3371021e29c5ae354a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_357f25dc9e491e3afc023f59caafed6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e70d620fef5c4804da8e14609ab3ffa = $(`<div id="html_1e70d620fef5c4804da8e14609ab3ffa" style="width: 100.0%; height: 100.0%;">Hospital das Forças Armadas (HFA)</div>`)[0];
+                popup_357f25dc9e491e3afc023f59caafed6d.setContent(html_1e70d620fef5c4804da8e14609ab3ffa);
+            
+        
+
+        marker_a68642b69130a12d753f2c7487371f6e.bindPopup(popup_357f25dc9e491e3afc023f59caafed6d)
+        ;
+
+        
+    
+    
+            marker_a68642b69130a12d753f2c7487371f6e.bindTooltip(
+                `<div>
+                     Hospital das Forças Armadas (HFA)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a68642b69130a12d753f2c7487371f6e.setIcon(icon_76db0615ac08eb3371021e29c5ae354a);
+            
+    
+            var marker_b9502f144e7a73f4a5c21e834b9a3552 = L.marker(
+                [-15.7321, -47.8921],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_91359e7f0da149cd668c30eed694bdb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9993e239fd8ad9f660015e247b47a9dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfea4c3048477e99a7e1a224a0885018 = $(`<div id="html_bfea4c3048477e99a7e1a224a0885018" style="width: 100.0%; height: 100.0%;">Hospital de Força Aérea de Brasília (HFAB)</div>`)[0];
+                popup_9993e239fd8ad9f660015e247b47a9dc.setContent(html_bfea4c3048477e99a7e1a224a0885018);
+            
+        
+
+        marker_b9502f144e7a73f4a5c21e834b9a3552.bindPopup(popup_9993e239fd8ad9f660015e247b47a9dc)
+        ;
+
+        
+    
+    
+            marker_b9502f144e7a73f4a5c21e834b9a3552.bindTooltip(
+                `<div>
+                     Hospital de Força Aérea de Brasília (HFAB)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9502f144e7a73f4a5c21e834b9a3552.setIcon(icon_91359e7f0da149cd668c30eed694bdb5);
+            
+    
+            var marker_67686d7a8384617b49779e15f7c12077 = L.marker(
+                [-15.7901, -47.9234],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_bf359a3c888f40c2d3a412ae091171d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f9e3bfc92ee9174987a3eb96c7ad4bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0b1d670851e58ebc1c3fe11baafc26b = $(`<div id="html_a0b1d670851e58ebc1c3fe11baafc26b" style="width: 100.0%; height: 100.0%;">Hospital Militar de Área de Brasília (HMAB)</div>`)[0];
+                popup_8f9e3bfc92ee9174987a3eb96c7ad4bd.setContent(html_a0b1d670851e58ebc1c3fe11baafc26b);
+            
+        
+
+        marker_67686d7a8384617b49779e15f7c12077.bindPopup(popup_8f9e3bfc92ee9174987a3eb96c7ad4bd)
+        ;
+
+        
+    
+    
+            marker_67686d7a8384617b49779e15f7c12077.bindTooltip(
+                `<div>
+                     Hospital Militar de Área de Brasília (HMAB)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_67686d7a8384617b49779e15f7c12077.setIcon(icon_bf359a3c888f40c2d3a412ae091171d7);
+            
+    
+            var marker_1a8965afd8c549687a48d76027f00800 = L.marker(
+                [-15.7645, -47.8712],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_5723a1d18fc99cb6c6c1c9a558330359 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a32e66ed8c3870930f2aec8b2aa624f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9291d41bd11ed88389df9b8247f2002b = $(`<div id="html_9291d41bd11ed88389df9b8247f2002b" style="width: 100.0%; height: 100.0%;">Hospital Naval de Brasília</div>`)[0];
+                popup_a32e66ed8c3870930f2aec8b2aa624f5.setContent(html_9291d41bd11ed88389df9b8247f2002b);
+            
+        
+
+        marker_1a8965afd8c549687a48d76027f00800.bindPopup(popup_a32e66ed8c3870930f2aec8b2aa624f5)
+        ;
+
+        
+    
+    
+            marker_1a8965afd8c549687a48d76027f00800.bindTooltip(
+                `<div>
+                     Hospital Naval de Brasília
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a8965afd8c549687a48d76027f00800.setIcon(icon_5723a1d18fc99cb6c6c1c9a558330359);
+            
+    
+            var marker_5f7f916daf731b1f474bbcad1815bfae = L.marker(
+                [-15.8341, -47.8727],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_51c954876df140ae2aae81dea95ff4ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae7dd428ae3ea516833c3165d3b184f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ddf989764484231c9df9abea8b76e48 = $(`<div id="html_0ddf989764484231c9df9abea8b76e48" style="width: 100.0%; height: 100.0%;">Hospital Brasília (Lago Sul)</div>`)[0];
+                popup_ae7dd428ae3ea516833c3165d3b184f7.setContent(html_0ddf989764484231c9df9abea8b76e48);
+            
+        
+
+        marker_5f7f916daf731b1f474bbcad1815bfae.bindPopup(popup_ae7dd428ae3ea516833c3165d3b184f7)
+        ;
+
+        
+    
+    
+            marker_5f7f916daf731b1f474bbcad1815bfae.bindTooltip(
+                `<div>
+                     Hospital Brasília (Lago Sul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5f7f916daf731b1f474bbcad1815bfae.setIcon(icon_51c954876df140ae2aae81dea95ff4ea);
+            
+    
+            var marker_207b85a99b6b6af269d052e137da09e0 = L.marker(
+                [-15.8421, -48.0214],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_902e238da67de44b65d6e90994c61913 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_256179f850705d08005a41f5cd751af4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6032f84c600a496d864fbc244d08099c = $(`<div id="html_6032f84c600a496d864fbc244d08099c" style="width: 100.0%; height: 100.0%;">Hospital Brasília (Águas Claras)</div>`)[0];
+                popup_256179f850705d08005a41f5cd751af4.setContent(html_6032f84c600a496d864fbc244d08099c);
+            
+        
+
+        marker_207b85a99b6b6af269d052e137da09e0.bindPopup(popup_256179f850705d08005a41f5cd751af4)
+        ;
+
+        
+    
+    
+            marker_207b85a99b6b6af269d052e137da09e0.bindTooltip(
+                `<div>
+                     Hospital Brasília (Águas Claras)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_207b85a99b6b6af269d052e137da09e0.setIcon(icon_902e238da67de44b65d6e90994c61913);
+            
+    
+            var marker_25ee0d36fd7c73f637d260b7185d1816 = L.marker(
+                [-15.8203, -47.9103],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_9b0fc6018c3aafd12a563c9e41d192b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45f86c961a6c7e77c2a9393ef340ca8b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abc457e1ee148682d9e5793779f5875b = $(`<div id="html_abc457e1ee148682d9e5793779f5875b" style="width: 100.0%; height: 100.0%;">Hospital Santa Lúcia (Asa Sul)</div>`)[0];
+                popup_45f86c961a6c7e77c2a9393ef340ca8b.setContent(html_abc457e1ee148682d9e5793779f5875b);
+            
+        
+
+        marker_25ee0d36fd7c73f637d260b7185d1816.bindPopup(popup_45f86c961a6c7e77c2a9393ef340ca8b)
+        ;
+
+        
+    
+    
+            marker_25ee0d36fd7c73f637d260b7185d1816.bindTooltip(
+                `<div>
+                     Hospital Santa Lúcia (Asa Sul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_25ee0d36fd7c73f637d260b7185d1816.setIcon(icon_9b0fc6018c3aafd12a563c9e41d192b5);
+            
+    
+            var marker_8fbea203530c52a5e0f38f6aedc8ad70 = L.marker(
+                [-15.7612, -47.8845],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_87b7b97aca9a8a0fc609b82da803dc0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96cdaaac4dd3a97008c863f3ac53517e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b0f01a3892a6777084dc926ae68cb71 = $(`<div id="html_3b0f01a3892a6777084dc926ae68cb71" style="width: 100.0%; height: 100.0%;">Hospital Santa Lúcia (Asa Norte)</div>`)[0];
+                popup_96cdaaac4dd3a97008c863f3ac53517e.setContent(html_3b0f01a3892a6777084dc926ae68cb71);
+            
+        
+
+        marker_8fbea203530c52a5e0f38f6aedc8ad70.bindPopup(popup_96cdaaac4dd3a97008c863f3ac53517e)
+        ;
+
+        
+    
+    
+            marker_8fbea203530c52a5e0f38f6aedc8ad70.bindTooltip(
+                `<div>
+                     Hospital Santa Lúcia (Asa Norte)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8fbea203530c52a5e0f38f6aedc8ad70.setIcon(icon_87b7b97aca9a8a0fc609b82da803dc0c);
+            
+    
+            var marker_093cc8b5b064a8178c4bbb564bcf36f8 = L.marker(
+                [-15.8321, -48.0556],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_029333371f092fc98652fb88bec8b968 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4585846e7a19201b9313cb80dd270112 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_297ef8260d69ed66867ee1cc76f65ef5 = $(`<div id="html_297ef8260d69ed66867ee1cc76f65ef5" style="width: 100.0%; height: 100.0%;">Hospital Santa Lúcia (Taguatinga)</div>`)[0];
+                popup_4585846e7a19201b9313cb80dd270112.setContent(html_297ef8260d69ed66867ee1cc76f65ef5);
+            
+        
+
+        marker_093cc8b5b064a8178c4bbb564bcf36f8.bindPopup(popup_4585846e7a19201b9313cb80dd270112)
+        ;
+
+        
+    
+    
+            marker_093cc8b5b064a8178c4bbb564bcf36f8.bindTooltip(
+                `<div>
+                     Hospital Santa Lúcia (Taguatinga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_093cc8b5b064a8178c4bbb564bcf36f8.setIcon(icon_029333371f092fc98652fb88bec8b968);
+            
+    
+            var marker_31913bc26265b5f46d9dcf551a92de83 = L.marker(
+                [-15.8212, -47.9123],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_576af968ab47ad02aa6845ed3e11d27d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db2173798f4f5af76a62ec9811a396b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_187f3a66e5f5f780163214e607daa507 = $(`<div id="html_187f3a66e5f5f780163214e607daa507" style="width: 100.0%; height: 100.0%;">Hospital Santa Luzia</div>`)[0];
+                popup_db2173798f4f5af76a62ec9811a396b3.setContent(html_187f3a66e5f5f780163214e607daa507);
+            
+        
+
+        marker_31913bc26265b5f46d9dcf551a92de83.bindPopup(popup_db2173798f4f5af76a62ec9811a396b3)
+        ;
+
+        
+    
+    
+            marker_31913bc26265b5f46d9dcf551a92de83.bindTooltip(
+                `<div>
+                     Hospital Santa Luzia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31913bc26265b5f46d9dcf551a92de83.setIcon(icon_576af968ab47ad02aa6845ed3e11d27d);
+            
+    
+            var marker_d6307e1e9cc27850b8253f29b8a541f4 = L.marker(
+                [-15.7634, -47.8812],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_4b3f1303140eb36d470cd5bb6eaeff03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a3dca7812784b56fcf1ae5a17db78df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7119ebc343a993359200a07b52268f62 = $(`<div id="html_7119ebc343a993359200a07b52268f62" style="width: 100.0%; height: 100.0%;">Hospital Santa Helena</div>`)[0];
+                popup_7a3dca7812784b56fcf1ae5a17db78df.setContent(html_7119ebc343a993359200a07b52268f62);
+            
+        
+
+        marker_d6307e1e9cc27850b8253f29b8a541f4.bindPopup(popup_7a3dca7812784b56fcf1ae5a17db78df)
+        ;
+
+        
+    
+    
+            marker_d6307e1e9cc27850b8253f29b8a541f4.bindTooltip(
+                `<div>
+                     Hospital Santa Helena
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d6307e1e9cc27850b8253f29b8a541f4.setIcon(icon_4b3f1303140eb36d470cd5bb6eaeff03);
+            
+    
+            var marker_4eea3e99af19288be82324ad2b77d399 = L.marker(
+                [-15.8521, -48.0432],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f1fd38f48ebb02d769eb5499657c0145 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c925c97f4614cdee36b770e6d8904736 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4202c14d248095eacf823555bbd3e7f = $(`<div id="html_c4202c14d248095eacf823555bbd3e7f" style="width: 100.0%; height: 100.0%;">Hospital Santa Marta (Taguatinga)</div>`)[0];
+                popup_c925c97f4614cdee36b770e6d8904736.setContent(html_c4202c14d248095eacf823555bbd3e7f);
+            
+        
+
+        marker_4eea3e99af19288be82324ad2b77d399.bindPopup(popup_c925c97f4614cdee36b770e6d8904736)
+        ;
+
+        
+    
+    
+            marker_4eea3e99af19288be82324ad2b77d399.bindTooltip(
+                `<div>
+                     Hospital Santa Marta (Taguatinga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4eea3e99af19288be82324ad2b77d399.setIcon(icon_f1fd38f48ebb02d769eb5499657c0145);
+            
+    
+            var marker_6db8e309b4dd171d76abb58a8fbf1ab6 = L.marker(
+                [-15.8198, -48.0654],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_7e8254d2e11b54478b853e33e979a281 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1afd863b3b2dba3e8242585aa4118f4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c08aac2768fd43f9eb4f5f9db8a9269e = $(`<div id="html_c08aac2768fd43f9eb4f5f9db8a9269e" style="width: 100.0%; height: 100.0%;">Hospital Anchieta (Taguatinga)</div>`)[0];
+                popup_1afd863b3b2dba3e8242585aa4118f4a.setContent(html_c08aac2768fd43f9eb4f5f9db8a9269e);
+            
+        
+
+        marker_6db8e309b4dd171d76abb58a8fbf1ab6.bindPopup(popup_1afd863b3b2dba3e8242585aa4118f4a)
+        ;
+
+        
+    
+    
+            marker_6db8e309b4dd171d76abb58a8fbf1ab6.bindTooltip(
+                `<div>
+                     Hospital Anchieta (Taguatinga)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6db8e309b4dd171d76abb58a8fbf1ab6.setIcon(icon_7e8254d2e11b54478b853e33e979a281);
+            
+    
+            var marker_b847538fc35b9c244e205bb7908ea32d = L.marker(
+                [-15.8234, -47.8654],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_05f18002aee143e164594f3ac983e73f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_438e429d5860bc5ebba068d4c8409b91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1736b6abade0740b3b45d977b25684f5 = $(`<div id="html_1736b6abade0740b3b45d977b25684f5" style="width: 100.0%; height: 100.0%;">Hospital Daher (Lago Sul)</div>`)[0];
+                popup_438e429d5860bc5ebba068d4c8409b91.setContent(html_1736b6abade0740b3b45d977b25684f5);
+            
+        
+
+        marker_b847538fc35b9c244e205bb7908ea32d.bindPopup(popup_438e429d5860bc5ebba068d4c8409b91)
+        ;
+
+        
+    
+    
+            marker_b847538fc35b9c244e205bb7908ea32d.bindTooltip(
+                `<div>
+                     Hospital Daher (Lago Sul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b847538fc35b9c244e205bb7908ea32d.setIcon(icon_05f18002aee143e164594f3ac983e73f);
+            
+    
+            var marker_e16bdad9c87e2d1678f101d39c245dcc = L.marker(
+                [-15.8187, -47.9054],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_03716e35db155874f7c99d73b122dcf6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fe8d5aa5c3b361f29f285639c8bfce3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_338cd9844fe5ac4aec516fd69a623d78 = $(`<div id="html_338cd9844fe5ac4aec516fd69a623d78" style="width: 100.0%; height: 100.0%;">Hospital Alvorada (Asa Sul)</div>`)[0];
+                popup_9fe8d5aa5c3b361f29f285639c8bfce3.setContent(html_338cd9844fe5ac4aec516fd69a623d78);
+            
+        
+
+        marker_e16bdad9c87e2d1678f101d39c245dcc.bindPopup(popup_9fe8d5aa5c3b361f29f285639c8bfce3)
+        ;
+
+        
+    
+    
+            marker_e16bdad9c87e2d1678f101d39c245dcc.bindTooltip(
+                `<div>
+                     Hospital Alvorada (Asa Sul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e16bdad9c87e2d1678f101d39c245dcc.setIcon(icon_03716e35db155874f7c99d73b122dcf6);
+            
+    
+            var marker_bd141888904ad5a96d77c38b5f312841 = L.marker(
+                [-15.7612, -47.8856],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_56834d03ad8b674673cc979c7e574372 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0708d830809edcac898a338f8a70e097 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56917b52a48959ab92fbf7dbee807892 = $(`<div id="html_56917b52a48959ab92fbf7dbee807892" style="width: 100.0%; height: 100.0%;">Hospital Prontonorte</div>`)[0];
+                popup_0708d830809edcac898a338f8a70e097.setContent(html_56917b52a48959ab92fbf7dbee807892);
+            
+        
+
+        marker_bd141888904ad5a96d77c38b5f312841.bindPopup(popup_0708d830809edcac898a338f8a70e097)
+        ;
+
+        
+    
+    
+            marker_bd141888904ad5a96d77c38b5f312841.bindTooltip(
+                `<div>
+                     Hospital Prontonorte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd141888904ad5a96d77c38b5f312841.setIcon(icon_56834d03ad8b674673cc979c7e574372);
+            
+    
+            var marker_5bb0caeae72af01edd9894bdae24f765 = L.marker(
+                [-15.7921, -47.9341],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_e97831530adc133097d3ff42df4ac2e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0bf74e479e6ee70128dbc3083ad6d4e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6588187c9756b771c61a692059251933 = $(`<div id="html_6588187c9756b771c61a692059251933" style="width: 100.0%; height: 100.0%;">Hospital São Mateus (Cruzeiro)</div>`)[0];
+                popup_0bf74e479e6ee70128dbc3083ad6d4e7.setContent(html_6588187c9756b771c61a692059251933);
+            
+        
+
+        marker_5bb0caeae72af01edd9894bdae24f765.bindPopup(popup_0bf74e479e6ee70128dbc3083ad6d4e7)
+        ;
+
+        
+    
+    
+            marker_5bb0caeae72af01edd9894bdae24f765.bindTooltip(
+                `<div>
+                     Hospital São Mateus (Cruzeiro)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5bb0caeae72af01edd9894bdae24f765.setIcon(icon_e97831530adc133097d3ff42df4ac2e3);
+            
+    
+            var marker_283219411165c45f59896e77cc0168e4 = L.marker(
+                [-16.0187, -48.0678],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_1f2e62d21e0581f487024f6d5360a883 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e0763fb16f32e76b987a685c859a111 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c8e42f21019ee689b292666b809392d = $(`<div id="html_4c8e42f21019ee689b292666b809392d" style="width: 100.0%; height: 100.0%;">Hospital Maria Auxiliadora (Gama)</div>`)[0];
+                popup_8e0763fb16f32e76b987a685c859a111.setContent(html_4c8e42f21019ee689b292666b809392d);
+            
+        
+
+        marker_283219411165c45f59896e77cc0168e4.bindPopup(popup_8e0763fb16f32e76b987a685c859a111)
+        ;
+
+        
+    
+    
+            marker_283219411165c45f59896e77cc0168e4.bindTooltip(
+                `<div>
+                     Hospital Maria Auxiliadora (Gama)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_283219411165c45f59896e77cc0168e4.setIcon(icon_1f2e62d21e0581f487024f6d5360a883);
+            
+    
+            var marker_fb2b8f0f10a4dea7f019afc37479a159 = L.marker(
+                [-15.8256, -47.9134],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_de3ff0099b72aec05dae375ec0060c90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2b123fdcf1e33b30f77148cd9ddda5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6d3afb8781d75708097d53b1cbc2ea4 = $(`<div id="html_b6d3afb8781d75708097d53b1cbc2ea4" style="width: 100.0%; height: 100.0%;">Hospital Home (Asa Sul)</div>`)[0];
+                popup_a2b123fdcf1e33b30f77148cd9ddda5f.setContent(html_b6d3afb8781d75708097d53b1cbc2ea4);
+            
+        
+
+        marker_fb2b8f0f10a4dea7f019afc37479a159.bindPopup(popup_a2b123fdcf1e33b30f77148cd9ddda5f)
+        ;
+
+        
+    
+    
+            marker_fb2b8f0f10a4dea7f019afc37479a159.bindTooltip(
+                `<div>
+                     Hospital Home (Asa Sul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb2b8f0f10a4dea7f019afc37479a159.setIcon(icon_de3ff0099b72aec05dae375ec0060c90);
+            
+    
+            var marker_55ba9d7cb9ce7492eb5ef0c6dd8df170 = L.marker(
+                [-15.8211, -47.9112],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_32a17016999811736966a372facb82f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_15b8815f61d7309df00770a0ffe817f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68173b6d0253a29d8b1d62292e61c6f0 = $(`<div id="html_68173b6d0253a29d8b1d62292e61c6f0" style="width: 100.0%; height: 100.0%;">DF Star (Asa Sul)</div>`)[0];
+                popup_15b8815f61d7309df00770a0ffe817f9.setContent(html_68173b6d0253a29d8b1d62292e61c6f0);
+            
+        
+
+        marker_55ba9d7cb9ce7492eb5ef0c6dd8df170.bindPopup(popup_15b8815f61d7309df00770a0ffe817f9)
+        ;
+
+        
+    
+    
+            marker_55ba9d7cb9ce7492eb5ef0c6dd8df170.bindTooltip(
+                `<div>
+                     DF Star (Asa Sul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55ba9d7cb9ce7492eb5ef0c6dd8df170.setIcon(icon_32a17016999811736966a372facb82f4);
+            
+    
+            var marker_4551c0b37cf560ad72781c298740f65f = L.marker(
+                [-15.8387, -48.0254],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_92ecd8a3caf45e063e2ca06a758729f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58a46448ca4fa1c8e8a878d7b55155bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f6a843faca4f8c938e909b9e7232bb1 = $(`<div id="html_7f6a843faca4f8c938e909b9e7232bb1" style="width: 100.0%; height: 100.0%;">Hospital Águas Claras</div>`)[0];
+                popup_58a46448ca4fa1c8e8a878d7b55155bf.setContent(html_7f6a843faca4f8c938e909b9e7232bb1);
+            
+        
+
+        marker_4551c0b37cf560ad72781c298740f65f.bindPopup(popup_58a46448ca4fa1c8e8a878d7b55155bf)
+        ;
+
+        
+    
+    
+            marker_4551c0b37cf560ad72781c298740f65f.bindTooltip(
+                `<div>
+                     Hospital Águas Claras
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4551c0b37cf560ad72781c298740f65f.setIcon(icon_92ecd8a3caf45e063e2ca06a758729f2);
+            
+    
+            var marker_03f65290667e7aa10f01303a4812403e = L.marker(
+                [-15.8112, -48.1054],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_4da1c51f52e48c1bde060d914433ae54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_645c57bff689d81a27346824dc80c4f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b9a5f6225e47ea6718a9cf725774be8 = $(`<div id="html_5b9a5f6225e47ea6718a9cf725774be8" style="width: 100.0%; height: 100.0%;">Hospital São Francisco (Ceilândia)</div>`)[0];
+                popup_645c57bff689d81a27346824dc80c4f1.setContent(html_5b9a5f6225e47ea6718a9cf725774be8);
+            
+        
+
+        marker_03f65290667e7aa10f01303a4812403e.bindPopup(popup_645c57bff689d81a27346824dc80c4f1)
+        ;
+
+        
+    
+    
+            marker_03f65290667e7aa10f01303a4812403e.bindTooltip(
+                `<div>
+                     Hospital São Francisco (Ceilândia)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_03f65290667e7aa10f01303a4812403e.setIcon(icon_4da1c51f52e48c1bde060d914433ae54);
+            
+    
+            var marker_3f295ea640b44338aba563b6ccb87a56 = L.marker(
+                [-15.8154, -47.9098],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_4ef0c83cc49e207356853afc2674f6ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_091c104973ead340afa89cb8ac0d67b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b704defe8690759d0da1de39d633653e = $(`<div id="html_b704defe8690759d0da1de39d633653e" style="width: 100.0%; height: 100.0%;">Hospital de Clínicas de Brasília</div>`)[0];
+                popup_091c104973ead340afa89cb8ac0d67b6.setContent(html_b704defe8690759d0da1de39d633653e);
+            
+        
+
+        marker_3f295ea640b44338aba563b6ccb87a56.bindPopup(popup_091c104973ead340afa89cb8ac0d67b6)
+        ;
+
+        
+    
+    
+            marker_3f295ea640b44338aba563b6ccb87a56.bindTooltip(
+                `<div>
+                     Hospital de Clínicas de Brasília
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f295ea640b44338aba563b6ccb87a56.setIcon(icon_4ef0c83cc49e207356853afc2674f6ee);
+            
+    
+            var marker_6f205001ee495647032215cd7d22eb1d = L.marker(
+                [-15.8256, -48.1212],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_4a48ad5b63b16625b9c580505b29c985 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65eb81181984bb177176b148edf2623b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d1acc62bab235f5e122e495cae7600f2 = $(`<div id="html_d1acc62bab235f5e122e495cae7600f2" style="width: 100.0%; height: 100.0%;">UPA Ceilândia I</div>`)[0];
+                popup_65eb81181984bb177176b148edf2623b.setContent(html_d1acc62bab235f5e122e495cae7600f2);
+            
+        
+
+        marker_6f205001ee495647032215cd7d22eb1d.bindPopup(popup_65eb81181984bb177176b148edf2623b)
+        ;
+
+        
+    
+    
+            marker_6f205001ee495647032215cd7d22eb1d.bindTooltip(
+                `<div>
+                     UPA Ceilândia I
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6f205001ee495647032215cd7d22eb1d.setIcon(icon_4a48ad5b63b16625b9c580505b29c985);
+            
+    
+            var marker_e9f34a23d9647e9518f253a8e355d52d = L.marker(
+                [-15.8543, -48.1345],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_899a1ed2c37838eff5d03cf13b5cbc66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7ddffb75b2e2b1bfcc51ec68fb92626 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c65459a406ea23d178bc0bed73e18676 = $(`<div id="html_c65459a406ea23d178bc0bed73e18676" style="width: 100.0%; height: 100.0%;">UPA Ceilândia II</div>`)[0];
+                popup_c7ddffb75b2e2b1bfcc51ec68fb92626.setContent(html_c65459a406ea23d178bc0bed73e18676);
+            
+        
+
+        marker_e9f34a23d9647e9518f253a8e355d52d.bindPopup(popup_c7ddffb75b2e2b1bfcc51ec68fb92626)
+        ;
+
+        
+    
+    
+            marker_e9f34a23d9647e9518f253a8e355d52d.bindTooltip(
+                `<div>
+                     UPA Ceilândia II
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e9f34a23d9647e9518f253a8e355d52d.setIcon(icon_899a1ed2c37838eff5d03cf13b5cbc66);
+            
+    
+            var marker_dc566acc79da64e273713a20e067617d = L.marker(
+                [-15.8987, -48.0654],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_17fffcbfbc719c397ec268d9c1a8afe4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c23ad655f00c50ab459bf805ae91877 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d61ba82695835de765cf071fdd8e6f56 = $(`<div id="html_d61ba82695835de765cf071fdd8e6f56" style="width: 100.0%; height: 100.0%;">UPA Recanto das Emas</div>`)[0];
+                popup_3c23ad655f00c50ab459bf805ae91877.setContent(html_d61ba82695835de765cf071fdd8e6f56);
+            
+        
+
+        marker_dc566acc79da64e273713a20e067617d.bindPopup(popup_3c23ad655f00c50ab459bf805ae91877)
+        ;
+
+        
+    
+    
+            marker_dc566acc79da64e273713a20e067617d.bindTooltip(
+                `<div>
+                     UPA Recanto das Emas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dc566acc79da64e273713a20e067617d.setIcon(icon_17fffcbfbc719c397ec268d9c1a8afe4);
+            
+    
+            var marker_de5e4f69e58bb7b797a243e46c1f47aa = L.marker(
+                [-15.8821, -48.1132],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_e03b98928fa4627e9d219a602c46f845 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c6429a41b5239c50530c1c844f907a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_efbb1f7d7e1c37e197508a61ae28d7b6 = $(`<div id="html_efbb1f7d7e1c37e197508a61ae28d7b6" style="width: 100.0%; height: 100.0%;">UPA Samambaia</div>`)[0];
+                popup_1c6429a41b5239c50530c1c844f907a5.setContent(html_efbb1f7d7e1c37e197508a61ae28d7b6);
+            
+        
+
+        marker_de5e4f69e58bb7b797a243e46c1f47aa.bindPopup(popup_1c6429a41b5239c50530c1c844f907a5)
+        ;
+
+        
+    
+    
+            marker_de5e4f69e58bb7b797a243e46c1f47aa.bindTooltip(
+                `<div>
+                     UPA Samambaia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de5e4f69e58bb7b797a243e46c1f47aa.setIcon(icon_e03b98928fa4627e9d219a602c46f845);
+            
+    
+            var marker_4fd0285b393aee14a467044b5a35773e = L.marker(
+                [-15.6612, -47.7854],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_5e51517404ff665a34143093c8fa802f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_200f17ee67c314075527be31c7cc8b04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26e1b019a31a8accc69edfb9f09a7166 = $(`<div id="html_26e1b019a31a8accc69edfb9f09a7166" style="width: 100.0%; height: 100.0%;">UPA Sobradinho</div>`)[0];
+                popup_200f17ee67c314075527be31c7cc8b04.setContent(html_26e1b019a31a8accc69edfb9f09a7166);
+            
+        
+
+        marker_4fd0285b393aee14a467044b5a35773e.bindPopup(popup_200f17ee67c314075527be31c7cc8b04)
+        ;
+
+        
+    
+    
+            marker_4fd0285b393aee14a467044b5a35773e.bindTooltip(
+                `<div>
+                     UPA Sobradinho
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4fd0285b393aee14a467044b5a35773e.setIcon(icon_5e51517404ff665a34143093c8fa802f);
+            
+    
+            var marker_4d2c04f34c03e632999acbc7aac8a23a = L.marker(
+                [-15.8912, -47.7712],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_0fcbf613db0384157a7f5bebdf7685e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1268b3f00535dc2ad8e6ccb9b67a633d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6780b605855b3ef8516a1d1edcc526f3 = $(`<div id="html_6780b605855b3ef8516a1d1edcc526f3" style="width: 100.0%; height: 100.0%;">UPA São Sebastião</div>`)[0];
+                popup_1268b3f00535dc2ad8e6ccb9b67a633d.setContent(html_6780b605855b3ef8516a1d1edcc526f3);
+            
+        
+
+        marker_4d2c04f34c03e632999acbc7aac8a23a.bindPopup(popup_1268b3f00535dc2ad8e6ccb9b67a633d)
+        ;
+
+        
+    
+    
+            marker_4d2c04f34c03e632999acbc7aac8a23a.bindTooltip(
+                `<div>
+                     UPA São Sebastião
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d2c04f34c03e632999acbc7aac8a23a.setIcon(icon_0fcbf613db0384157a7f5bebdf7685e4);
+            
+    
+            var marker_0186c0dfb70fc168a86cd0b42cb7ea94 = L.marker(
+                [-15.8754, -47.9612],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_d188059f51cbf0bd48147e8dc7ba3ebd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38edbdbc5206f2b830b27b9490fa1ac7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33f64a96aacdbb5541cbdb3257a7e0e9 = $(`<div id="html_33f64a96aacdbb5541cbdb3257a7e0e9" style="width: 100.0%; height: 100.0%;">UPA Núcleo Bandeirante</div>`)[0];
+                popup_38edbdbc5206f2b830b27b9490fa1ac7.setContent(html_33f64a96aacdbb5541cbdb3257a7e0e9);
+            
+        
+
+        marker_0186c0dfb70fc168a86cd0b42cb7ea94.bindPopup(popup_38edbdbc5206f2b830b27b9490fa1ac7)
+        ;
+
+        
+    
+    
+            marker_0186c0dfb70fc168a86cd0b42cb7ea94.bindTooltip(
+                `<div>
+                     UPA Núcleo Bandeirante
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0186c0dfb70fc168a86cd0b42cb7ea94.setIcon(icon_d188059f51cbf0bd48147e8dc7ba3ebd);
+            
+    
+            var marker_734124cd053a76039314ea13dda204a8 = L.marker(
+                [-15.8012, -48.0234],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_b70f13fcb3a27dd6c21330a5ea86cf83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_87d08ec08aafa6037415894d3afabcf3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c015be1f7e699a6792b12de943188d2 = $(`<div id="html_7c015be1f7e699a6792b12de943188d2" style="width: 100.0%; height: 100.0%;">UPA Vicente Pires</div>`)[0];
+                popup_87d08ec08aafa6037415894d3afabcf3.setContent(html_7c015be1f7e699a6792b12de943188d2);
+            
+        
+
+        marker_734124cd053a76039314ea13dda204a8.bindPopup(popup_87d08ec08aafa6037415894d3afabcf3)
+        ;
+
+        
+    
+    
+            marker_734124cd053a76039314ea13dda204a8.bindTooltip(
+                `<div>
+                     UPA Vicente Pires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_734124cd053a76039314ea13dda204a8.setIcon(icon_b70f13fcb3a27dd6c21330a5ea86cf83);
+            
+    
+            var marker_eafe7a4730b0e7853016284b68761908 = L.marker(
+                [-15.6234, -47.6612],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_17a41a6ad98c05647034d4635a9f0b0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_335a7d2f7754f4114ed61fbdce68a9a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbfff2653be4b8a49ef6fd6832dc3edc = $(`<div id="html_fbfff2653be4b8a49ef6fd6832dc3edc" style="width: 100.0%; height: 100.0%;">UPA Planaltina</div>`)[0];
+                popup_335a7d2f7754f4114ed61fbdce68a9a6.setContent(html_fbfff2653be4b8a49ef6fd6832dc3edc);
+            
+        
+
+        marker_eafe7a4730b0e7853016284b68761908.bindPopup(popup_335a7d2f7754f4114ed61fbdce68a9a6)
+        ;
+
+        
+    
+    
+            marker_eafe7a4730b0e7853016284b68761908.bindTooltip(
+                `<div>
+                     UPA Planaltina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eafe7a4730b0e7853016284b68761908.setIcon(icon_17a41a6ad98c05647034d4635a9f0b0a);
+            
+    
+            var marker_d3a2d72b36d10192fe642316aa12a30d = L.marker(
+                [-16.0256, -48.0712],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_d07c8420c19e49612c7eb7b869258a7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af7294f7a21eb7e0c5be556b20f1c515 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4646215db65615f0be33e94032e14406 = $(`<div id="html_4646215db65615f0be33e94032e14406" style="width: 100.0%; height: 100.0%;">UPA Gama</div>`)[0];
+                popup_af7294f7a21eb7e0c5be556b20f1c515.setContent(html_4646215db65615f0be33e94032e14406);
+            
+        
+
+        marker_d3a2d72b36d10192fe642316aa12a30d.bindPopup(popup_af7294f7a21eb7e0c5be556b20f1c515)
+        ;
+
+        
+    
+    
+            marker_d3a2d72b36d10192fe642316aa12a30d.bindTooltip(
+                `<div>
+                     UPA Gama
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3a2d72b36d10192fe642316aa12a30d.setIcon(icon_d07c8420c19e49612c7eb7b869258a7e);
+            
+    
+            var marker_8d248bc7476f0cbaa99ca7303e036cf6 = L.marker(
+                [-15.8312, -48.0512],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_0638978c0e559ef327e42cbc02b27d39 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d5dee73df6e99ec35ecbe823261fe4f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_400b9ad249d1817186fbc18400711a23 = $(`<div id="html_400b9ad249d1817186fbc18400711a23" style="width: 100.0%; height: 100.0%;">Policlínica de Taguatinga</div>`)[0];
+                popup_d5dee73df6e99ec35ecbe823261fe4f5.setContent(html_400b9ad249d1817186fbc18400711a23);
+            
+        
+
+        marker_8d248bc7476f0cbaa99ca7303e036cf6.bindPopup(popup_d5dee73df6e99ec35ecbe823261fe4f5)
+        ;
+
+        
+    
+    
+            marker_8d248bc7476f0cbaa99ca7303e036cf6.bindTooltip(
+                `<div>
+                     Policlínica de Taguatinga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8d248bc7476f0cbaa99ca7303e036cf6.setIcon(icon_0638978c0e559ef327e42cbc02b27d39);
+            
+    
+            var marker_0e951fdc0329fed4d816cb80655c118a = L.marker(
+                [-15.8212, -48.1145],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_d5a76a1a9a78af3eb92cfdefa76de945 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b0d4ed29ac545421ec22a94438af313a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b89edf59fda5af8118becfe20f098a5 = $(`<div id="html_0b89edf59fda5af8118becfe20f098a5" style="width: 100.0%; height: 100.0%;">Policlínica de Ceilândia</div>`)[0];
+                popup_b0d4ed29ac545421ec22a94438af313a.setContent(html_0b89edf59fda5af8118becfe20f098a5);
+            
+        
+
+        marker_0e951fdc0329fed4d816cb80655c118a.bindPopup(popup_b0d4ed29ac545421ec22a94438af313a)
+        ;
+
+        
+    
+    
+            marker_0e951fdc0329fed4d816cb80655c118a.bindTooltip(
+                `<div>
+                     Policlínica de Ceilândia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e951fdc0329fed4d816cb80655c118a.setIcon(icon_d5a76a1a9a78af3eb92cfdefa76de945);
+            
+    
+            var marker_6c704ad9a0695a2014a7ccda619b037c = L.marker(
+                [-15.7754, -47.7812],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_af5104f7165c506f7b80dc2383120905 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce6cb7e688219b95f694568d33fe01ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75c28ae7c6dbc7b3e1f3fdef594e8020 = $(`<div id="html_75c28ae7c6dbc7b3e1f3fdef594e8020" style="width: 100.0%; height: 100.0%;">Policlínica do Paranoá</div>`)[0];
+                popup_ce6cb7e688219b95f694568d33fe01ae.setContent(html_75c28ae7c6dbc7b3e1f3fdef594e8020);
+            
+        
+
+        marker_6c704ad9a0695a2014a7ccda619b037c.bindPopup(popup_ce6cb7e688219b95f694568d33fe01ae)
+        ;
+
+        
+    
+    
+            marker_6c704ad9a0695a2014a7ccda619b037c.bindTooltip(
+                `<div>
+                     Policlínica do Paranoá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c704ad9a0695a2014a7ccda619b037c.setIcon(icon_af5104f7165c506f7b80dc2383120905);
+            
+    
+            var marker_e10a821905edcffd1ff67c2ace4c36b7 = L.marker(
+                [-15.8187, -47.9812],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_60184f99a7d39ceedd8700bd75f941c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b398f51e0a0f3ba23829c6867095c7ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c400c673f48d0d88d5766208fd18add = $(`<div id="html_5c400c673f48d0d88d5766208fd18add" style="width: 100.0%; height: 100.0%;">Policlínica do Guará</div>`)[0];
+                popup_b398f51e0a0f3ba23829c6867095c7ed.setContent(html_5c400c673f48d0d88d5766208fd18add);
+            
+        
+
+        marker_e10a821905edcffd1ff67c2ace4c36b7.bindPopup(popup_b398f51e0a0f3ba23829c6867095c7ed)
+        ;
+
+        
+    
+    
+            marker_e10a821905edcffd1ff67c2ace4c36b7.bindTooltip(
+                `<div>
+                     Policlínica do Guará
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e10a821905edcffd1ff67c2ace4c36b7.setIcon(icon_60184f99a7d39ceedd8700bd75f941c7);
+            
+    
+            var marker_55847cfc844ef7dc9f35c2822e6586de = L.marker(
+                [-15.6154, -47.6543],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_8c8da2775d31666223cb39e5a6c493f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_510ba9dac13077f5f2833a5dc7b93c9a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_efa76b9252c3ffb505bf08a883d55fce = $(`<div id="html_efa76b9252c3ffb505bf08a883d55fce" style="width: 100.0%; height: 100.0%;">Policlínica de Planaltina</div>`)[0];
+                popup_510ba9dac13077f5f2833a5dc7b93c9a.setContent(html_efa76b9252c3ffb505bf08a883d55fce);
+            
+        
+
+        marker_55847cfc844ef7dc9f35c2822e6586de.bindPopup(popup_510ba9dac13077f5f2833a5dc7b93c9a)
+        ;
+
+        
+    
+    
+            marker_55847cfc844ef7dc9f35c2822e6586de.bindTooltip(
+                `<div>
+                     Policlínica de Planaltina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55847cfc844ef7dc9f35c2822e6586de.setIcon(icon_8c8da2775d31666223cb39e5a6c493f4);
+            
+    
+            var marker_314e1dd22be43cb219c63beb6440bad7 = L.marker(
+                [-15.8034, -47.8921],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_fb8151dee20ed8dffd80fd9e3c8e6ca1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd043edcd1f437d2ab9dfc1e58831631 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9793c19ab154fa7b07bf5555ef3a8b0b = $(`<div id="html_9793c19ab154fa7b07bf5555ef3a8b0b" style="width: 100.0%; height: 100.0%;">Hospital Sarah Kubitschek (Asa Sul)</div>`)[0];
+                popup_cd043edcd1f437d2ab9dfc1e58831631.setContent(html_9793c19ab154fa7b07bf5555ef3a8b0b);
+            
+        
+
+        marker_314e1dd22be43cb219c63beb6440bad7.bindPopup(popup_cd043edcd1f437d2ab9dfc1e58831631)
+        ;
+
+        
+    
+    
+            marker_314e1dd22be43cb219c63beb6440bad7.bindTooltip(
+                `<div>
+                     Hospital Sarah Kubitschek (Asa Sul)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_314e1dd22be43cb219c63beb6440bad7.setIcon(icon_fb8151dee20ed8dffd80fd9e3c8e6ca1);
+            
+    
+            var marker_7130727534cde1a46498146e6ccf1f9c = L.marker(
+                [-15.7312, -47.8643],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_2d401efa40844126d3d3a856ab9ba2d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1cf859625c64c9ad2d6186ea14907fa3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_456f733f5222d12471b5b83911ccc306 = $(`<div id="html_456f733f5222d12471b5b83911ccc306" style="width: 100.0%; height: 100.0%;">Hospital Sarah Kubitschek (Lago Norte)</div>`)[0];
+                popup_1cf859625c64c9ad2d6186ea14907fa3.setContent(html_456f733f5222d12471b5b83911ccc306);
+            
+        
+
+        marker_7130727534cde1a46498146e6ccf1f9c.bindPopup(popup_1cf859625c64c9ad2d6186ea14907fa3)
+        ;
+
+        
+    
+    
+            marker_7130727534cde1a46498146e6ccf1f9c.bindTooltip(
+                `<div>
+                     Hospital Sarah Kubitschek (Lago Norte)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7130727534cde1a46498146e6ccf1f9c.setIcon(icon_2d401efa40844126d3d3a856ab9ba2d0);
+            
+    
+            var marker_6bac3ea80d4c468494edf19e46f0800d = L.marker(
+                [-15.7954, -47.9123],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_dc55d7a3cbefd61255cddd4529fca695 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e98c4fb6ab82ee459ebc98cd1dead2d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a634c3bdca77c18cacbabbe5b6fbfa6b = $(`<div id="html_a634c3bdca77c18cacbabbe5b6fbfa6b" style="width: 100.0%; height: 100.0%;">Instituto de Cardiologia do DF (ICDF)</div>`)[0];
+                popup_e98c4fb6ab82ee459ebc98cd1dead2d2.setContent(html_a634c3bdca77c18cacbabbe5b6fbfa6b);
+            
+        
+
+        marker_6bac3ea80d4c468494edf19e46f0800d.bindPopup(popup_e98c4fb6ab82ee459ebc98cd1dead2d2)
+        ;
+
+        
+    
+    
+            marker_6bac3ea80d4c468494edf19e46f0800d.bindTooltip(
+                `<div>
+                     Instituto de Cardiologia do DF (ICDF)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6bac3ea80d4c468494edf19e46f0800d.setIcon(icon_dc55d7a3cbefd61255cddd4529fca695);
+            
+    
+            var marker_f8ed73000796011ed8930db348b478ab = L.marker(
+                [-15.7943, -48.0212],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_656d1df7759a1eb8e48f95c4933d3615 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f6f961895e640a060e1c23b6ec8276a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_780238ce14507410ec6395a1991b1765 = $(`<div id="html_780238ce14507410ec6395a1991b1765" style="width: 100.0%; height: 100.0%;">Hospital Veterinário de Brasília (HVEP)</div>`)[0];
+                popup_9f6f961895e640a060e1c23b6ec8276a.setContent(html_780238ce14507410ec6395a1991b1765);
+            
+        
+
+        marker_f8ed73000796011ed8930db348b478ab.bindPopup(popup_9f6f961895e640a060e1c23b6ec8276a)
+        ;
+
+        
+    
+    
+            marker_f8ed73000796011ed8930db348b478ab.bindTooltip(
+                `<div>
+                     Hospital Veterinário de Brasília (HVEP)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8ed73000796011ed8930db348b478ab.setIcon(icon_656d1df7759a1eb8e48f95c4933d3615);
+            
+    
+            var marker_1efd931457d1496a7a4d72dee0613eca = L.marker(
+                [-15.8123, -47.8945],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_a747836d7f846fbf53eeecca4f03d02f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b1ad9fb7376bc98fef3aee49691c8890 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c38db59112aa3b8bbab18762b69f9373 = $(`<div id="html_c38db59112aa3b8bbab18762b69f9373" style="width: 100.0%; height: 100.0%;">Centro de Saúde 01 Asa Sul</div>`)[0];
+                popup_b1ad9fb7376bc98fef3aee49691c8890.setContent(html_c38db59112aa3b8bbab18762b69f9373);
+            
+        
+
+        marker_1efd931457d1496a7a4d72dee0613eca.bindPopup(popup_b1ad9fb7376bc98fef3aee49691c8890)
+        ;
+
+        
+    
+    
+            marker_1efd931457d1496a7a4d72dee0613eca.bindTooltip(
+                `<div>
+                     Centro de Saúde 01 Asa Sul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1efd931457d1496a7a4d72dee0613eca.setIcon(icon_a747836d7f846fbf53eeecca4f03d02f);
+            
+    
+            var marker_289825f4f080effd727b03332c98caef = L.marker(
+                [-15.8156, -47.9012],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_6a9a7c86f07e5e37eaf24750248be89f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9fda5f5400866937e88b31f274ae079 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2137fb13e53150170678e6f01362c3a = $(`<div id="html_b2137fb13e53150170678e6f01362c3a" style="width: 100.0%; height: 100.0%;">Centro de Saúde 02 Asa Sul</div>`)[0];
+                popup_d9fda5f5400866937e88b31f274ae079.setContent(html_b2137fb13e53150170678e6f01362c3a);
+            
+        
+
+        marker_289825f4f080effd727b03332c98caef.bindPopup(popup_d9fda5f5400866937e88b31f274ae079)
+        ;
+
+        
+    
+    
+            marker_289825f4f080effd727b03332c98caef.bindTooltip(
+                `<div>
+                     Centro de Saúde 02 Asa Sul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_289825f4f080effd727b03332c98caef.setIcon(icon_6a9a7c86f07e5e37eaf24750248be89f);
+            
+    
+            var marker_be90b8ff82c3dc8f8e14b87c60b9da7a = L.marker(
+                [-15.7743, -47.8812],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_d07f152ab414dfc2cf54d54bf32b5800 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09938bf726fe1c38659e15869fb9e4bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b63971a1b6fc5bd41c785fbe062a69f = $(`<div id="html_3b63971a1b6fc5bd41c785fbe062a69f" style="width: 100.0%; height: 100.0%;">Centro de Saúde 01 Asa Norte</div>`)[0];
+                popup_09938bf726fe1c38659e15869fb9e4bc.setContent(html_3b63971a1b6fc5bd41c785fbe062a69f);
+            
+        
+
+        marker_be90b8ff82c3dc8f8e14b87c60b9da7a.bindPopup(popup_09938bf726fe1c38659e15869fb9e4bc)
+        ;
+
+        
+    
+    
+            marker_be90b8ff82c3dc8f8e14b87c60b9da7a.bindTooltip(
+                `<div>
+                     Centro de Saúde 01 Asa Norte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be90b8ff82c3dc8f8e14b87c60b9da7a.setIcon(icon_d07f152ab414dfc2cf54d54bf32b5800);
+            
+    
+            var marker_82864827af711da5fe82a7a4e721a4b4 = L.marker(
+                [-15.7654, -47.8912],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_4444abdc1be4a56a8f72f5fba52ad24a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b09d0220a97b1ec42d3a18ce030256d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47c6c81a3fca7443cdf839eca929eb4e = $(`<div id="html_47c6c81a3fca7443cdf839eca929eb4e" style="width: 100.0%; height: 100.0%;">Centro de Saúde 03 Asa Norte</div>`)[0];
+                popup_7b09d0220a97b1ec42d3a18ce030256d.setContent(html_47c6c81a3fca7443cdf839eca929eb4e);
+            
+        
+
+        marker_82864827af711da5fe82a7a4e721a4b4.bindPopup(popup_7b09d0220a97b1ec42d3a18ce030256d)
+        ;
+
+        
+    
+    
+            marker_82864827af711da5fe82a7a4e721a4b4.bindTooltip(
+                `<div>
+                     Centro de Saúde 03 Asa Norte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82864827af711da5fe82a7a4e721a4b4.setIcon(icon_4444abdc1be4a56a8f72f5fba52ad24a);
+            
+    
+            var marker_8ae232585c7624547932cd48cb75890d = L.marker(
+                [-15.8198, -47.9156],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_04fb627ab03be8dcabd653a15889d4d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e5599f2660df4e99035ba6bd6274109 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f7cd777964f13d9ed135170e049fa6f = $(`<div id="html_3f7cd777964f13d9ed135170e049fa6f" style="width: 100.0%; height: 100.0%;">Hospital MedSenior</div>`)[0];
+                popup_8e5599f2660df4e99035ba6bd6274109.setContent(html_3f7cd777964f13d9ed135170e049fa6f);
+            
+        
+
+        marker_8ae232585c7624547932cd48cb75890d.bindPopup(popup_8e5599f2660df4e99035ba6bd6274109)
+        ;
+
+        
+    
+    
+            marker_8ae232585c7624547932cd48cb75890d.bindTooltip(
+                `<div>
+                     Hospital MedSenior
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ae232585c7624547932cd48cb75890d.setIcon(icon_04fb627ab03be8dcabd653a15889d4d7);
+            
+    
+            var marker_0a9a95e272ae1e40f3127b60ea1613ce = L.marker(
+                [-15.8234, -47.9132],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_ede5db145155c4497afa3608eab67f11 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_069a3d1fd6847ad5d48935338edc1e78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49d8fe10a170dc2a54d95b6bbdbdf10e = $(`<div id="html_49d8fe10a170dc2a54d95b6bbdbdf10e" style="width: 100.0%; height: 100.0%;">Hospital Sírio-Libanês (Brasília)</div>`)[0];
+                popup_069a3d1fd6847ad5d48935338edc1e78.setContent(html_49d8fe10a170dc2a54d95b6bbdbdf10e);
+            
+        
+
+        marker_0a9a95e272ae1e40f3127b60ea1613ce.bindPopup(popup_069a3d1fd6847ad5d48935338edc1e78)
+        ;
+
+        
+    
+    
+            marker_0a9a95e272ae1e40f3127b60ea1613ce.bindTooltip(
+                `<div>
+                     Hospital Sírio-Libanês (Brasília)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0a9a95e272ae1e40f3127b60ea1613ce.setIcon(icon_ede5db145155c4497afa3608eab67f11);
+            
+    
+            var marker_ea89bfe23a1b5b097ec7d9be38c4fa44 = L.marker(
+                [-15.8254, -47.9145],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_fde25584283e991e1f1b800624dda850 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_486ee3c88d222907470c9fc1fe989149 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8eb10149055708244dbc1bd7ea8f3dd = $(`<div id="html_e8eb10149055708244dbc1bd7ea8f3dd" style="width: 100.0%; height: 100.0%;">Hospital Life Center</div>`)[0];
+                popup_486ee3c88d222907470c9fc1fe989149.setContent(html_e8eb10149055708244dbc1bd7ea8f3dd);
+            
+        
+
+        marker_ea89bfe23a1b5b097ec7d9be38c4fa44.bindPopup(popup_486ee3c88d222907470c9fc1fe989149)
+        ;
+
+        
+    
+    
+            marker_ea89bfe23a1b5b097ec7d9be38c4fa44.bindTooltip(
+                `<div>
+                     Hospital Life Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea89bfe23a1b5b097ec7d9be38c4fa44.setIcon(icon_fde25584283e991e1f1b800624dda850);
+            
+    
+            var marker_fdb6ea7af14dcad5b11e20839e27ab82 = L.marker(
+                [-15.8212, -47.9187],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_5d2b30d4426b450f3c80b99d59902660 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67ad4a90c66bfa115b556f1239a307d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77579f44d850f424e2a25b91ae626142 = $(`<div id="html_77579f44d850f424e2a25b91ae626142" style="width: 100.0%; height: 100.0%;">Hospital Coração do Brasil</div>`)[0];
+                popup_67ad4a90c66bfa115b556f1239a307d7.setContent(html_77579f44d850f424e2a25b91ae626142);
+            
+        
+
+        marker_fdb6ea7af14dcad5b11e20839e27ab82.bindPopup(popup_67ad4a90c66bfa115b556f1239a307d7)
+        ;
+
+        
+    
+    
+            marker_fdb6ea7af14dcad5b11e20839e27ab82.bindTooltip(
+                `<div>
+                     Hospital Coração do Brasil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fdb6ea7af14dcad5b11e20839e27ab82.setIcon(icon_5d2b30d4426b450f3c80b99d59902660);
+            
+    
+            var marker_5e22269f7d01209a546e4fa9e67d168e = L.marker(
+                [-15.8343, -48.0532],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f94c6218ceb9d45a6e684c9175c198d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64af12d36faae24d66e5f8c060d041c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95692458f7992dc6efc46f4dec3bf6f3 = $(`<div id="html_95692458f7992dc6efc46f4dec3bf6f3" style="width: 100.0%; height: 100.0%;">Hospital Metropolitano</div>`)[0];
+                popup_64af12d36faae24d66e5f8c060d041c5.setContent(html_95692458f7992dc6efc46f4dec3bf6f3);
+            
+        
+
+        marker_5e22269f7d01209a546e4fa9e67d168e.bindPopup(popup_64af12d36faae24d66e5f8c060d041c5)
+        ;
+
+        
+    
+    
+            marker_5e22269f7d01209a546e4fa9e67d168e.bindTooltip(
+                `<div>
+                     Hospital Metropolitano
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5e22269f7d01209a546e4fa9e67d168e.setIcon(icon_f94c6218ceb9d45a6e684c9175c198d1);
+            
+    
+            var marker_f7e68e544a7d3fd5188cd444513ced97 = L.marker(
+                [-15.8201, -47.9154],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_72d249ce67c890f06aa7b3bac13b3883 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_630f2b5e09451d8922dfbc6865dbae61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_224a5ad46bff19ac6fb1382aa12b0944 = $(`<div id="html_224a5ad46bff19ac6fb1382aa12b0944" style="width: 100.0%; height: 100.0%;">Centro Clínico Advance</div>`)[0];
+                popup_630f2b5e09451d8922dfbc6865dbae61.setContent(html_224a5ad46bff19ac6fb1382aa12b0944);
+            
+        
+
+        marker_f7e68e544a7d3fd5188cd444513ced97.bindPopup(popup_630f2b5e09451d8922dfbc6865dbae61)
+        ;
+
+        
+    
+    
+            marker_f7e68e544a7d3fd5188cd444513ced97.bindTooltip(
+                `<div>
+                     Centro Clínico Advance
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7e68e544a7d3fd5188cd444513ced97.setIcon(icon_72d249ce67c890f06aa7b3bac13b3883);
+            
+    
+            var marker_2578f49528e831ede47261f87230cee2 = L.marker(
+                [-15.8265, -47.9212],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f976918464b5b55902d78c0e690e001c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cc2c8e43d20bac7c86a8c3f5ecfe5cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb516cfddf5bc73fd81b405990bdde5b = $(`<div id="html_cb516cfddf5bc73fd81b405990bdde5b" style="width: 100.0%; height: 100.0%;">Hospital de Olhos CBV</div>`)[0];
+                popup_3cc2c8e43d20bac7c86a8c3f5ecfe5cc.setContent(html_cb516cfddf5bc73fd81b405990bdde5b);
+            
+        
+
+        marker_2578f49528e831ede47261f87230cee2.bindPopup(popup_3cc2c8e43d20bac7c86a8c3f5ecfe5cc)
+        ;
+
+        
+    
+    
+            marker_2578f49528e831ede47261f87230cee2.bindTooltip(
+                `<div>
+                     Hospital de Olhos CBV
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2578f49528e831ede47261f87230cee2.setIcon(icon_f976918464b5b55902d78c0e690e001c);
+            
+    
+            var marker_88cb3fe00c58030ea9458c9560c77b60 = L.marker(
+                [-15.8312, -47.9054],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_3a90196bdd7b077f39cfe68187607e29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9acff1a67cae4e56e68c3367a107d5c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_adf5e10be48396f380bc0fbfd7b7367d = $(`<div id="html_adf5e10be48396f380bc0fbfd7b7367d" style="width: 100.0%; height: 100.0%;">Hospital de Olhos Dr. Ricardo Guimarães</div>`)[0];
+                popup_9acff1a67cae4e56e68c3367a107d5c6.setContent(html_adf5e10be48396f380bc0fbfd7b7367d);
+            
+        
+
+        marker_88cb3fe00c58030ea9458c9560c77b60.bindPopup(popup_9acff1a67cae4e56e68c3367a107d5c6)
+        ;
+
+        
+    
+    
+            marker_88cb3fe00c58030ea9458c9560c77b60.bindTooltip(
+                `<div>
+                     Hospital de Olhos Dr. Ricardo Guimarães
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88cb3fe00c58030ea9458c9560c77b60.setIcon(icon_3a90196bdd7b077f39cfe68187607e29);
+            
+    
+            var marker_ed13164077e3e7eb25f15f8de972f298 = L.marker(
+                [-15.8345, -48.0512],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_5016ca9a4e8cfa6a978a7790a2eb0eeb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a105a09a6646999ba1b99c2611f9b736 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4a0042b86c003714c1b56bb114dbace = $(`<div id="html_c4a0042b86c003714c1b56bb114dbace" style="width: 100.0%; height: 100.0%;">Hospital do Coração de Taguatinga</div>`)[0];
+                popup_a105a09a6646999ba1b99c2611f9b736.setContent(html_c4a0042b86c003714c1b56bb114dbace);
+            
+        
+
+        marker_ed13164077e3e7eb25f15f8de972f298.bindPopup(popup_a105a09a6646999ba1b99c2611f9b736)
+        ;
+
+        
+    
+    
+            marker_ed13164077e3e7eb25f15f8de972f298.bindTooltip(
+                `<div>
+                     Hospital do Coração de Taguatinga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ed13164077e3e7eb25f15f8de972f298.setIcon(icon_5016ca9a4e8cfa6a978a7790a2eb0eeb);
+            
+    
+            var marker_6ce3355c8e5ecd87e688458472f6bb53 = L.marker(
+                [-15.8234, -47.9112],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_a5c3deaee74db60e15f415630e069c97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0ef039786c21e31d0fab254450f09ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_707ecebcf0e8ada2f60b2f5ba5e2ba2a = $(`<div id="html_707ecebcf0e8ada2f60b2f5ba5e2ba2a" style="width: 100.0%; height: 100.0%;">Instituto de Câncer de Brasília</div>`)[0];
+                popup_c0ef039786c21e31d0fab254450f09ce.setContent(html_707ecebcf0e8ada2f60b2f5ba5e2ba2a);
+            
+        
+
+        marker_6ce3355c8e5ecd87e688458472f6bb53.bindPopup(popup_c0ef039786c21e31d0fab254450f09ce)
+        ;
+
+        
+    
+    
+            marker_6ce3355c8e5ecd87e688458472f6bb53.bindTooltip(
+                `<div>
+                     Instituto de Câncer de Brasília
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ce3355c8e5ecd87e688458472f6bb53.setIcon(icon_a5c3deaee74db60e15f415630e069c97);
+            
+    
+            var marker_e5c035d1916144ea226658283cedc202 = L.marker(
+                [-15.8201, -47.9101],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f143312628fa091ee67d00ca0631e13c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81ec901ecff5e1d8538b3b4b8e04b24b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82f6e1eb95901ab1a0413075d6eeea90 = $(`<div id="html_82f6e1eb95901ab1a0413075d6eeea90" style="width: 100.0%; height: 100.0%;">Centro Radiológico de Brasília</div>`)[0];
+                popup_81ec901ecff5e1d8538b3b4b8e04b24b.setContent(html_82f6e1eb95901ab1a0413075d6eeea90);
+            
+        
+
+        marker_e5c035d1916144ea226658283cedc202.bindPopup(popup_81ec901ecff5e1d8538b3b4b8e04b24b)
+        ;
+
+        
+    
+    
+            marker_e5c035d1916144ea226658283cedc202.bindTooltip(
+                `<div>
+                     Centro Radiológico de Brasília
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5c035d1916144ea226658283cedc202.setIcon(icon_f143312628fa091ee67d00ca0631e13c);
+            
+    
+            var marker_e1de4a1765bbb1dfa610b7bed127dbc9 = L.marker(
+                [-15.8212, -47.9143],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_23f31638afab13df57bf29e612c38d04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1adeb930a554a5f7d2b838944a79924 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20d615647cf28fd7e38b3ac9f16d29df = $(`<div id="html_20d615647cf28fd7e38b3ac9f16d29df" style="width: 100.0%; height: 100.0%;">Hospital Ortopédico de Brasília (HOBS)</div>`)[0];
+                popup_e1adeb930a554a5f7d2b838944a79924.setContent(html_20d615647cf28fd7e38b3ac9f16d29df);
+            
+        
+
+        marker_e1de4a1765bbb1dfa610b7bed127dbc9.bindPopup(popup_e1adeb930a554a5f7d2b838944a79924)
+        ;
+
+        
+    
+    
+            marker_e1de4a1765bbb1dfa610b7bed127dbc9.bindTooltip(
+                `<div>
+                     Hospital Ortopédico de Brasília (HOBS)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e1de4a1765bbb1dfa610b7bed127dbc9.setIcon(icon_23f31638afab13df57bf29e612c38d04);
+            
+    
+            var marker_b11e3716d775eb2522f820f61ae517c2 = L.marker(
+                [-15.9012, -48.0432],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_22627debf5288d3f6856f458873cb698 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d99b2dd01453d15133c71ca7f2f3998 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab4e26738f39e63f4f588cc5ccef8c16 = $(`<div id="html_ab4e26738f39e63f4f588cc5ccef8c16" style="width: 100.0%; height: 100.0%;">Unidade de Pronto Atendimento Riacho Fundo II</div>`)[0];
+                popup_5d99b2dd01453d15133c71ca7f2f3998.setContent(html_ab4e26738f39e63f4f588cc5ccef8c16);
+            
+        
+
+        marker_b11e3716d775eb2522f820f61ae517c2.bindPopup(popup_5d99b2dd01453d15133c71ca7f2f3998)
+        ;
+
+        
+    
+    
+            marker_b11e3716d775eb2522f820f61ae517c2.bindTooltip(
+                `<div>
+                     Unidade de Pronto Atendimento Riacho Fundo II
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b11e3716d775eb2522f820f61ae517c2.setIcon(icon_22627debf5288d3f6856f458873cb698);
+            
+    
+            var marker_cd19b80839051af31f5395fd67a4209c = L.marker(
+                [-16.0123, -48.0145],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_b8b3608b6eddb50297ecbd9ed5bf19b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55a3969cec073e663a5f3673ec81c600 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91eaf51873741286ca03b83218e8b7bb = $(`<div id="html_91eaf51873741286ca03b83218e8b7bb" style="width: 100.0%; height: 100.0%;">UBS 01 Santa Maria</div>`)[0];
+                popup_55a3969cec073e663a5f3673ec81c600.setContent(html_91eaf51873741286ca03b83218e8b7bb);
+            
+        
+
+        marker_cd19b80839051af31f5395fd67a4209c.bindPopup(popup_55a3969cec073e663a5f3673ec81c600)
+        ;
+
+        
+    
+    
+            marker_cd19b80839051af31f5395fd67a4209c.bindTooltip(
+                `<div>
+                     UBS 01 Santa Maria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cd19b80839051af31f5395fd67a4209c.setIcon(icon_b8b3608b6eddb50297ecbd9ed5bf19b6);
+            
+    
+            var marker_e7ebfe34db9542acaff413d13c324fd3 = L.marker(
+                [-16.0187, -48.0098],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_2d7f0430cd94e76a7781c3d31c94b631 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5216f4092210d839061f8164ee0c222 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_914ebbb51a7da47bda959c13de2535c7 = $(`<div id="html_914ebbb51a7da47bda959c13de2535c7" style="width: 100.0%; height: 100.0%;">UBS 02 Santa Maria</div>`)[0];
+                popup_c5216f4092210d839061f8164ee0c222.setContent(html_914ebbb51a7da47bda959c13de2535c7);
+            
+        
+
+        marker_e7ebfe34db9542acaff413d13c324fd3.bindPopup(popup_c5216f4092210d839061f8164ee0c222)
+        ;
+
+        
+    
+    
+            marker_e7ebfe34db9542acaff413d13c324fd3.bindTooltip(
+                `<div>
+                     UBS 02 Santa Maria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e7ebfe34db9542acaff413d13c324fd3.setIcon(icon_2d7f0430cd94e76a7781c3d31c94b631);
+            
+    
+            var marker_ceb9b6a432db0b12441432d539ccca72 = L.marker(
+                [-15.8943, -47.7754],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_fd831f8ff01e4662daa4703c283e0b1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0e74df2e12793937134620b445da5eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61cde102bf68648b469e5ae345b739a9 = $(`<div id="html_61cde102bf68648b469e5ae345b739a9" style="width: 100.0%; height: 100.0%;">UBS 01 São Sebastião</div>`)[0];
+                popup_f0e74df2e12793937134620b445da5eb.setContent(html_61cde102bf68648b469e5ae345b739a9);
+            
+        
+
+        marker_ceb9b6a432db0b12441432d539ccca72.bindPopup(popup_f0e74df2e12793937134620b445da5eb)
+        ;
+
+        
+    
+    
+            marker_ceb9b6a432db0b12441432d539ccca72.bindTooltip(
+                `<div>
+                     UBS 01 São Sebastião
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ceb9b6a432db0b12441432d539ccca72.setIcon(icon_fd831f8ff01e4662daa4703c283e0b1d);
+            
+    
+            var marker_ee612325349c76b0d25b19b61d77740e = L.marker(
+                [-15.9012, -48.0612],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_cdd4ae4d01705f4626cbaca2581dc1a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acc0eb67c157db66c6a9d3f297110ace = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc302a7f4949cf93efd4281c8a29921c = $(`<div id="html_dc302a7f4949cf93efd4281c8a29921c" style="width: 100.0%; height: 100.0%;">UBS 01 Recanto das Emas</div>`)[0];
+                popup_acc0eb67c157db66c6a9d3f297110ace.setContent(html_dc302a7f4949cf93efd4281c8a29921c);
+            
+        
+
+        marker_ee612325349c76b0d25b19b61d77740e.bindPopup(popup_acc0eb67c157db66c6a9d3f297110ace)
+        ;
+
+        
+    
+    
+            marker_ee612325349c76b0d25b19b61d77740e.bindTooltip(
+                `<div>
+                     UBS 01 Recanto das Emas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee612325349c76b0d25b19b61d77740e.setIcon(icon_cdd4ae4d01705f4626cbaca2581dc1a2);
+            
+    
+            var marker_93c12329958f357cbd4817026100c7ed = L.marker(
+                [-15.7843, -47.9812],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_9db2e405c9dfc2d0b5c2c1abebef63b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e50c3e8d5a5335fc4b04f69bcd3d0d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b834e77bd9df6d1af740beecb7d4df6d = $(`<div id="html_b834e77bd9df6d1af740beecb7d4df6d" style="width: 100.0%; height: 100.0%;">UBS 01 Estrutural</div>`)[0];
+                popup_0e50c3e8d5a5335fc4b04f69bcd3d0d0.setContent(html_b834e77bd9df6d1af740beecb7d4df6d);
+            
+        
+
+        marker_93c12329958f357cbd4817026100c7ed.bindPopup(popup_0e50c3e8d5a5335fc4b04f69bcd3d0d0)
+        ;
+
+        
+    
+    
+            marker_93c12329958f357cbd4817026100c7ed.bindTooltip(
+                `<div>
+                     UBS 01 Estrutural
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93c12329958f357cbd4817026100c7ed.setIcon(icon_9db2e405c9dfc2d0b5c2c1abebef63b5);
+            
+    
+            var marker_240d7f2ee6d1257157b3fded57690b3f = L.marker(
+                [-15.7234, -47.8745],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_6d5c461172e4becfda2a7de8f8ae3e0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24f9e8c56e100fcccfa48473a22deb61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e3d8d6f20b9c39babf9f8a1bada751c = $(`<div id="html_8e3d8d6f20b9c39babf9f8a1bada751c" style="width: 100.0%; height: 100.0%;">UBS 01 Varjão</div>`)[0];
+                popup_24f9e8c56e100fcccfa48473a22deb61.setContent(html_8e3d8d6f20b9c39babf9f8a1bada751c);
+            
+        
+
+        marker_240d7f2ee6d1257157b3fded57690b3f.bindPopup(popup_24f9e8c56e100fcccfa48473a22deb61)
+        ;
+
+        
+    
+    
+            marker_240d7f2ee6d1257157b3fded57690b3f.bindTooltip(
+                `<div>
+                     UBS 01 Varjão
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_240d7f2ee6d1257157b3fded57690b3f.setIcon(icon_6d5c461172e4becfda2a7de8f8ae3e0c);
+            
+    
+            var marker_4069d4f60e6173597ccd9074ffe0f560 = L.marker(
+                [-15.7512, -47.7654],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_fbabd3beb6b385b45bb3d8bda71c2882 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_286662e33797a25cc59ccd4910aa079b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c95a643f523e9db752c5bc7a282f7771 = $(`<div id="html_c95a643f523e9db752c5bc7a282f7771" style="width: 100.0%; height: 100.0%;">UBS 01 Itapoã</div>`)[0];
+                popup_286662e33797a25cc59ccd4910aa079b.setContent(html_c95a643f523e9db752c5bc7a282f7771);
+            
+        
+
+        marker_4069d4f60e6173597ccd9074ffe0f560.bindPopup(popup_286662e33797a25cc59ccd4910aa079b)
+        ;
+
+        
+    
+    
+            marker_4069d4f60e6173597ccd9074ffe0f560.bindTooltip(
+                `<div>
+                     UBS 01 Itapoã
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4069d4f60e6173597ccd9074ffe0f560.setIcon(icon_fbabd3beb6b385b45bb3d8bda71c2882);
+            
+    
+            var marker_7f33d65172a2f56aa7ffac143b170c7f = L.marker(
+                [-15.8543, -47.8212],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f0d02ed5c60d8558cd94cd47dc642d62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31882b6e6b17a3e06c781647bffd7d80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb80da655ef6dc18cb06a442028048d2 = $(`<div id="html_fb80da655ef6dc18cb06a442028048d2" style="width: 100.0%; height: 100.0%;">UBS 01 Jardim Botânico</div>`)[0];
+                popup_31882b6e6b17a3e06c781647bffd7d80.setContent(html_fb80da655ef6dc18cb06a442028048d2);
+            
+        
+
+        marker_7f33d65172a2f56aa7ffac143b170c7f.bindPopup(popup_31882b6e6b17a3e06c781647bffd7d80)
+        ;
+
+        
+    
+    
+            marker_7f33d65172a2f56aa7ffac143b170c7f.bindTooltip(
+                `<div>
+                     UBS 01 Jardim Botânico
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7f33d65172a2f56aa7ffac143b170c7f.setIcon(icon_f0d02ed5c60d8558cd94cd47dc642d62);
+            
+    
+            var marker_d4e6abe0beb7a67f107dc787206846d6 = L.marker(
+                [-15.7987, -47.9212],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_255d8b581aa80a34e0058fdba32d2d7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7028c60fba3dcc76af0dbd7a60c00136 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30025cced4853253f2341eec67780afb = $(`<div id="html_30025cced4853253f2341eec67780afb" style="width: 100.0%; height: 100.0%;">UBS 01 Sudoeste</div>`)[0];
+                popup_7028c60fba3dcc76af0dbd7a60c00136.setContent(html_30025cced4853253f2341eec67780afb);
+            
+        
+
+        marker_d4e6abe0beb7a67f107dc787206846d6.bindPopup(popup_7028c60fba3dcc76af0dbd7a60c00136)
+        ;
+
+        
+    
+    
+            marker_d4e6abe0beb7a67f107dc787206846d6.bindTooltip(
+                `<div>
+                     UBS 01 Sudoeste
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4e6abe0beb7a67f107dc787206846d6.setIcon(icon_255d8b581aa80a34e0058fdba32d2d7a);
+            
+    
+            var marker_66f076d40ff347fb86a2585755bd705d = L.marker(
+                [-15.7912, -47.9354],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_52b5666ba0555bd1d9952a56250f2718 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_019a8e582223cfef2aa9656745007790 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d6f659ac598e01508ced52c32ee1721 = $(`<div id="html_9d6f659ac598e01508ced52c32ee1721" style="width: 100.0%; height: 100.0%;">UBS 01 Cruzeiro</div>`)[0];
+                popup_019a8e582223cfef2aa9656745007790.setContent(html_9d6f659ac598e01508ced52c32ee1721);
+            
+        
+
+        marker_66f076d40ff347fb86a2585755bd705d.bindPopup(popup_019a8e582223cfef2aa9656745007790)
+        ;
+
+        
+    
+    
+            marker_66f076d40ff347fb86a2585755bd705d.bindTooltip(
+                `<div>
+                     UBS 01 Cruzeiro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_66f076d40ff347fb86a2585755bd705d.setIcon(icon_52b5666ba0555bd1d9952a56250f2718);
+            
+    
+            var marker_596ae4be8679a76c5cdf8d2d3da50190 = L.marker(
+                [-15.7845, -47.9412],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_ed7eaa39a766ef39cb49722599f00398 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0141983005d4d5a171de841a733bb68f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66fbbd9ff4a5a8a420c3d42537356c87 = $(`<div id="html_66fbbd9ff4a5a8a420c3d42537356c87" style="width: 100.0%; height: 100.0%;">UBS 02 Cruzeiro</div>`)[0];
+                popup_0141983005d4d5a171de841a733bb68f.setContent(html_66fbbd9ff4a5a8a420c3d42537356c87);
+            
+        
+
+        marker_596ae4be8679a76c5cdf8d2d3da50190.bindPopup(popup_0141983005d4d5a171de841a733bb68f)
+        ;
+
+        
+    
+    
+            marker_596ae4be8679a76c5cdf8d2d3da50190.bindTooltip(
+                `<div>
+                     UBS 02 Cruzeiro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_596ae4be8679a76c5cdf8d2d3da50190.setIcon(icon_ed7eaa39a766ef39cb49722599f00398);
+            
+    
+            var marker_2a22f023091eb8c64c3f1bb6f7db21e4 = L.marker(
+                [-15.8512, -47.9512],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f69e66a239eaa59a90fb96b11003d262 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_591eb04b664138b80b4e2e09025ec72b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8139d78bbfa2b8645e16ef07f14e83f = $(`<div id="html_b8139d78bbfa2b8645e16ef07f14e83f" style="width: 100.0%; height: 100.0%;">UBS 01 Candangolândia</div>`)[0];
+                popup_591eb04b664138b80b4e2e09025ec72b.setContent(html_b8139d78bbfa2b8645e16ef07f14e83f);
+            
+        
+
+        marker_2a22f023091eb8c64c3f1bb6f7db21e4.bindPopup(popup_591eb04b664138b80b4e2e09025ec72b)
+        ;
+
+        
+    
+    
+            marker_2a22f023091eb8c64c3f1bb6f7db21e4.bindTooltip(
+                `<div>
+                     UBS 01 Candangolândia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a22f023091eb8c64c3f1bb6f7db21e4.setIcon(icon_f69e66a239eaa59a90fb96b11003d262);
+            
+    
+            var marker_adda548dc935f25268b54d425a618641 = L.marker(
+                [-15.8712, -47.9654],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f36a24d4a8ba32d2b6a1eae17f600f53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf027da1f619e318c05a2d96faaf0ddf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_baa55509be96f5a89296fd250d3cfa1f = $(`<div id="html_baa55509be96f5a89296fd250d3cfa1f" style="width: 100.0%; height: 100.0%;">UBS 01 Núcleo Bandeirante</div>`)[0];
+                popup_bf027da1f619e318c05a2d96faaf0ddf.setContent(html_baa55509be96f5a89296fd250d3cfa1f);
+            
+        
+
+        marker_adda548dc935f25268b54d425a618641.bindPopup(popup_bf027da1f619e318c05a2d96faaf0ddf)
+        ;
+
+        
+    
+    
+            marker_adda548dc935f25268b54d425a618641.bindTooltip(
+                `<div>
+                     UBS 01 Núcleo Bandeirante
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_adda548dc935f25268b54d425a618641.setIcon(icon_f36a24d4a8ba32d2b6a1eae17f600f53);
+            
+    
+            var marker_f501194e6f69d7c11c96a4b1ea3f6389 = L.marker(
+                [-15.8812, -47.9912],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_26073e44f6aac044f4a9e18c435537df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9ed0b6323dd099e73023e3c8d6ef3e12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_966700d3de766ffad5ccb1fdcf9b6950 = $(`<div id="html_966700d3de766ffad5ccb1fdcf9b6950" style="width: 100.0%; height: 100.0%;">UBS 01 Riacho Fundo I</div>`)[0];
+                popup_9ed0b6323dd099e73023e3c8d6ef3e12.setContent(html_966700d3de766ffad5ccb1fdcf9b6950);
+            
+        
+
+        marker_f501194e6f69d7c11c96a4b1ea3f6389.bindPopup(popup_9ed0b6323dd099e73023e3c8d6ef3e12)
+        ;
+
+        
+    
+    
+            marker_f501194e6f69d7c11c96a4b1ea3f6389.bindTooltip(
+                `<div>
+                     UBS 01 Riacho Fundo I
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f501194e6f69d7c11c96a4b1ea3f6389.setIcon(icon_26073e44f6aac044f4a9e18c435537df);
+            
+    
+            var marker_946ba406f6351c1420dd3cf16f1fb859 = L.marker(
+                [-15.8943, -47.9612],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_7392878bef057cbb3cd48202e1e4473b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0835cdf12cb64dab97a3d6da23f4be87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75de3934c540ae41af10df5af5ec13d1 = $(`<div id="html_75de3934c540ae41af10df5af5ec13d1" style="width: 100.0%; height: 100.0%;">UBS 01 Park Way</div>`)[0];
+                popup_0835cdf12cb64dab97a3d6da23f4be87.setContent(html_75de3934c540ae41af10df5af5ec13d1);
+            
+        
+
+        marker_946ba406f6351c1420dd3cf16f1fb859.bindPopup(popup_0835cdf12cb64dab97a3d6da23f4be87)
+        ;
+
+        
+    
+    
+            marker_946ba406f6351c1420dd3cf16f1fb859.bindTooltip(
+                `<div>
+                     UBS 01 Park Way
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_946ba406f6351c1420dd3cf16f1fb859.setIcon(icon_7392878bef057cbb3cd48202e1e4473b);
+            
+    
+            var marker_c36a60719635b54a54deac87d08d3d4f = L.marker(
+                [-15.8412, -48.0312],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_c160f450910addb2c96ce2b6fd49968b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8078e9a01ebd7b22b65d5ef73adaf12c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47da01811b20c9f637c0ca92411d0b35 = $(`<div id="html_47da01811b20c9f637c0ca92411d0b35" style="width: 100.0%; height: 100.0%;">UBS 01 Águas Claras</div>`)[0];
+                popup_8078e9a01ebd7b22b65d5ef73adaf12c.setContent(html_47da01811b20c9f637c0ca92411d0b35);
+            
+        
+
+        marker_c36a60719635b54a54deac87d08d3d4f.bindPopup(popup_8078e9a01ebd7b22b65d5ef73adaf12c)
+        ;
+
+        
+    
+    
+            marker_c36a60719635b54a54deac87d08d3d4f.bindTooltip(
+                `<div>
+                     UBS 01 Águas Claras
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c36a60719635b54a54deac87d08d3d4f.setIcon(icon_c160f450910addb2c96ce2b6fd49968b);
+            
+    
+            var marker_c1af64637fd52f8afbfa801a7819462a = L.marker(
+                [-15.8043, -48.0154],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_b78f5fff6110c8e3663798366a5611f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bbb0752804e65ddce3e39c1f3aaa12a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7479974c38e37c75b178b73e24f5dfd = $(`<div id="html_d7479974c38e37c75b178b73e24f5dfd" style="width: 100.0%; height: 100.0%;">UBS 01 Vicente Pires</div>`)[0];
+                popup_bbb0752804e65ddce3e39c1f3aaa12a1.setContent(html_d7479974c38e37c75b178b73e24f5dfd);
+            
+        
+
+        marker_c1af64637fd52f8afbfa801a7819462a.bindPopup(popup_bbb0752804e65ddce3e39c1f3aaa12a1)
+        ;
+
+        
+    
+    
+            marker_c1af64637fd52f8afbfa801a7819462a.bindTooltip(
+                `<div>
+                     UBS 01 Vicente Pires
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1af64637fd52f8afbfa801a7819462a.setIcon(icon_b78f5fff6110c8e3663798366a5611f1);
+            
+    
+            var marker_30cdd8b8dfdb3d6f8d2f8221183587b5 = L.marker(
+                [-15.6012, -47.8612],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f8a43172c715902cabc64824046e6550 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb9903345f82847a0a2e245a73dbeaa0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca7226b7f0f6cf29f760c5ca112ccb86 = $(`<div id="html_ca7226b7f0f6cf29f760c5ca112ccb86" style="width: 100.0%; height: 100.0%;">UBS 01 Fercal</div>`)[0];
+                popup_eb9903345f82847a0a2e245a73dbeaa0.setContent(html_ca7226b7f0f6cf29f760c5ca112ccb86);
+            
+        
+
+        marker_30cdd8b8dfdb3d6f8d2f8221183587b5.bindPopup(popup_eb9903345f82847a0a2e245a73dbeaa0)
+        ;
+
+        
+    
+    
+            marker_30cdd8b8dfdb3d6f8d2f8221183587b5.bindTooltip(
+                `<div>
+                     UBS 01 Fercal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_30cdd8b8dfdb3d6f8d2f8221183587b5.setIcon(icon_f8a43172c715902cabc64824046e6550);
+            
+    
+            var marker_c19bc9e66a818fa8e9ef91f06ee5106e = L.marker(
+                [-15.6412, -47.8012],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_875cfe00b6cc11b2e817de091fcd584d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_827238197b95baadbb821e80fdde53d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e934df9ce2659164d1c09689d96f199 = $(`<div id="html_8e934df9ce2659164d1c09689d96f199" style="width: 100.0%; height: 100.0%;">UBS 01 Sobradinho II</div>`)[0];
+                popup_827238197b95baadbb821e80fdde53d5.setContent(html_8e934df9ce2659164d1c09689d96f199);
+            
+        
+
+        marker_c19bc9e66a818fa8e9ef91f06ee5106e.bindPopup(popup_827238197b95baadbb821e80fdde53d5)
+        ;
+
+        
+    
+    
+            marker_c19bc9e66a818fa8e9ef91f06ee5106e.bindTooltip(
+                `<div>
+                     UBS 01 Sobradinho II
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c19bc9e66a818fa8e9ef91f06ee5106e.setIcon(icon_875cfe00b6cc11b2e817de091fcd584d);
+            
+    
+            var marker_fc02429441dd4661c27b05493fb9bcfd = L.marker(
+                [-15.6543, -47.7912],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_66bfad7da7d60ceb194fc7b3681517de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9aceccc20c70e421ac93e48e7c66aefa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8cbb48f2ae7f11490725b8925335432 = $(`<div id="html_b8cbb48f2ae7f11490725b8925335432" style="width: 100.0%; height: 100.0%;">UBS 02 Sobradinho</div>`)[0];
+                popup_9aceccc20c70e421ac93e48e7c66aefa.setContent(html_b8cbb48f2ae7f11490725b8925335432);
+            
+        
+
+        marker_fc02429441dd4661c27b05493fb9bcfd.bindPopup(popup_9aceccc20c70e421ac93e48e7c66aefa)
+        ;
+
+        
+    
+    
+            marker_fc02429441dd4661c27b05493fb9bcfd.bindTooltip(
+                `<div>
+                     UBS 02 Sobradinho
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fc02429441dd4661c27b05493fb9bcfd.setIcon(icon_66bfad7da7d60ceb194fc7b3681517de);
+            
+    
+            var marker_b00c46676245899adc31bd37b8cd0961 = L.marker(
+                [-15.6212, -47.6512],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_daa35ddb119e2a9ebf3b357fe985df88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca92d0ba6c11eb91df452cbeaf8666bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d53c0ca0a068f3d028df10e44354188b = $(`<div id="html_d53c0ca0a068f3d028df10e44354188b" style="width: 100.0%; height: 100.0%;">UBS 01 Planaltina (Vila Buritis)</div>`)[0];
+                popup_ca92d0ba6c11eb91df452cbeaf8666bd.setContent(html_d53c0ca0a068f3d028df10e44354188b);
+            
+        
+
+        marker_b00c46676245899adc31bd37b8cd0961.bindPopup(popup_ca92d0ba6c11eb91df452cbeaf8666bd)
+        ;
+
+        
+    
+    
+            marker_b00c46676245899adc31bd37b8cd0961.bindTooltip(
+                `<div>
+                     UBS 01 Planaltina (Vila Buritis)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b00c46676245899adc31bd37b8cd0961.setIcon(icon_daa35ddb119e2a9ebf3b357fe985df88);
+            
+    
+            var marker_58063fc53aa0b5fb2e1ac236849225d6 = L.marker(
+                [-15.6187, -47.6612],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_f74ea4aca7df26af506dbf1f8af796e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab315ac4203d9de7eb73811c4fbdacd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b600e6452994c9c53f73ff488a8117a3 = $(`<div id="html_b600e6452994c9c53f73ff488a8117a3" style="width: 100.0%; height: 100.0%;">UBS 02 Planaltina</div>`)[0];
+                popup_ab315ac4203d9de7eb73811c4fbdacd2.setContent(html_b600e6452994c9c53f73ff488a8117a3);
+            
+        
+
+        marker_58063fc53aa0b5fb2e1ac236849225d6.bindPopup(popup_ab315ac4203d9de7eb73811c4fbdacd2)
+        ;
+
+        
+    
+    
+            marker_58063fc53aa0b5fb2e1ac236849225d6.bindTooltip(
+                `<div>
+                     UBS 02 Planaltina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_58063fc53aa0b5fb2e1ac236849225d6.setIcon(icon_f74ea4aca7df26af506dbf1f8af796e6);
+            
+    
+            var marker_754384a1aea712e6672c9f3a53714eac = L.marker(
+                [-15.7712, -47.7843],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_23a19e06c7bf734d4c1c7394016dae9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ff395e57fda84fc33a9277600d58fe6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd2fcaeeaeb53a8bbe19e0277b18262b = $(`<div id="html_fd2fcaeeaeb53a8bbe19e0277b18262b" style="width: 100.0%; height: 100.0%;">UBS 01 Paranoá</div>`)[0];
+                popup_ff395e57fda84fc33a9277600d58fe6b.setContent(html_fd2fcaeeaeb53a8bbe19e0277b18262b);
+            
+        
+
+        marker_754384a1aea712e6672c9f3a53714eac.bindPopup(popup_ff395e57fda84fc33a9277600d58fe6b)
+        ;
+
+        
+    
+    
+            marker_754384a1aea712e6672c9f3a53714eac.bindTooltip(
+                `<div>
+                     UBS 01 Paranoá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_754384a1aea712e6672c9f3a53714eac.setIcon(icon_23a19e06c7bf734d4c1c7394016dae9d);
+            
+    
+            var marker_6a0c8e9c6f951579a66752f229712cf5 = L.marker(
+                [-15.7412, -47.8812],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_1f696803157b65cfabcdd9dbf00a503c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a86a99053e19c894aee5ae5f928fa19c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2ef151e91976238d9a99401d6afca50 = $(`<div id="html_a2ef151e91976238d9a99401d6afca50" style="width: 100.0%; height: 100.0%;">UBS 01 Lago Norte</div>`)[0];
+                popup_a86a99053e19c894aee5ae5f928fa19c.setContent(html_a2ef151e91976238d9a99401d6afca50);
+            
+        
+
+        marker_6a0c8e9c6f951579a66752f229712cf5.bindPopup(popup_a86a99053e19c894aee5ae5f928fa19c)
+        ;
+
+        
+    
+    
+            marker_6a0c8e9c6f951579a66752f229712cf5.bindTooltip(
+                `<div>
+                     UBS 01 Lago Norte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a0c8e9c6f951579a66752f229712cf5.setIcon(icon_1f696803157b65cfabcdd9dbf00a503c);
+            
+    
+            var marker_4dcb70c95f94a6d9baeb2dc0baaf8b64 = L.marker(
+                [-15.8140447, -47.9659546],
+                {
+}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+    
+            var icon_5db0cc0dfae4945e8a4027d041c67efb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_878e284288795326f07fb348fabb1c0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_910ea384243670c2ad96177a02c3a0f8 = $(`<div id="html_910ea384243670c2ad96177a02c3a0f8" style="width: 100.0%; height: 100.0%;">Almoxarifado Central da Secretaria de Saúde do DF</div>`)[0];
+                popup_878e284288795326f07fb348fabb1c0a.setContent(html_910ea384243670c2ad96177a02c3a0f8);
+            
+        
+
+        marker_4dcb70c95f94a6d9baeb2dc0baaf8b64.bindPopup(popup_878e284288795326f07fb348fabb1c0a)
+        ;
+
+        
+    
+    
+            marker_4dcb70c95f94a6d9baeb2dc0baaf8b64.bindTooltip(
+                `<div>
+                     Almoxarifado Central da Secretaria de Saúde do DF
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4dcb70c95f94a6d9baeb2dc0baaf8b64.setIcon(icon_5db0cc0dfae4945e8a4027d041c67efb);
+            
+    
+            var circle_marker_cd72b1726a322c00d5eeebfd08d591eb = L.circleMarker(
+                [-15.8140447, -47.9659546],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_e8fd9543a0adc4fc5e2815b8339132ec);
+        
+</script>
+</html>
