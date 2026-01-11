@@ -1,0 +1,101 @@
+id,id_hospital,nome,lat,lng,prioridade,peso_kg,penalidade,tempo_estimado_entrega_min
+1,1,Hospital de Base do Distrito Federal (IHBDF),-15.7997,-47.8837,ALTA,84.33,5.0,45
+2,2,Hospital Regional da Asa Norte (HRAN),-15.7834,-47.8845,MEDIA,99.84,2.0,20
+3,3,Hospital Universitário de Brasília (HUB),-15.7672,-47.8724,CRITICA,91.9,10.0,30
+4,4,Hospital Materno Infantil de Brasília (HMIB),-15.8153,-47.9015,MEDIA,95.74,2.0,30
+5,5,Hospital Regional de Taguatinga (HRT),-15.8247,-48.0588,MEDIA,18.94,2.0,10
+6,6,Hospital Regional de Ceilândia (HRC),-15.8201,-48.1121,MEDIA,38.3,2.0,20
+7,7,Hospital Regional do Gama (HRG),-16.021,-48.065,MEDIA,99.92,2.0,15
+8,8,Hospital Regional de Sobradinho (HRS),-15.6534,-47.7891,BAIXA,96.12,1.0,45
+9,9,Hospital Regional de Planaltina (HRPL),-15.6131,-47.6521,CRITICA,79.91,10.0,45
+10,10,Hospital Regional de Samambaia (HRSAM),-15.8902,-48.0903,BAIXA,46.55,1.0,10
+11,11,Hospital Regional de Santa Maria (HRSM),-16.0154,-48.0123,MEDIA,96.98,2.0,60
+12,12,Hospital Regional de Brazlândia (HRBZ),-15.6698,-48.1985,MEDIA,60.25,2.0,10
+13,13,Hospital Regional do Paranoá (HRP),-15.7721,-47.7785,MEDIA,17.55,2.0,10
+14,14,Hospital Regional do Guará (HRGU),-15.8174,-47.9781,CRITICA,24.1,10.0,15
+15,15,Hospital de Apoio de Brasília (HAB),-15.7531,-47.9012,MEDIA,30.36,2.0,15
+16,16,Hospital da Criança de Brasília (HCB),-15.7512,-47.9034,BAIXA,67.92,1.0,20
+17,17,Hospital São Vicente de Paulo (HSVP),-15.8341,-48.0552,BAIXA,44.56,1.0,10
+18,18,Hospital das Forças Armadas (HFA),-15.8154,-47.9251,BAIXA,16.78,1.0,10
+19,19,Hospital de Força Aérea de Brasília (HFAB),-15.7321,-47.8921,BAIXA,30.06,1.0,20
+20,20,Hospital Militar de Área de Brasília (HMAB),-15.7901,-47.9234,ALTA,49.71,5.0,60
+21,21,Hospital Naval de Brasília,-15.7645,-47.8712,MEDIA,15.7,2.0,45
+22,22,Hospital Brasília (Lago Sul),-15.8341,-47.8727,MEDIA,61.95,2.0,20
+23,23,Hospital Brasília (Águas Claras),-15.8421,-48.0214,MEDIA,20.09,2.0,15
+24,24,Hospital Santa Lúcia (Asa Sul),-15.8203,-47.9103,MEDIA,56.63,2.0,10
+25,25,Hospital Santa Lúcia (Asa Norte),-15.7612,-47.8845,ALTA,38.04,5.0,30
+26,26,Hospital Santa Lúcia (Taguatinga),-15.8321,-48.0556,CRITICA,14.74,10.0,45
+27,27,Hospital Santa Luzia,-15.8212,-47.9123,MEDIA,96.91,2.0,30
+28,28,Hospital Santa Helena,-15.7634,-47.8812,BAIXA,43.81,1.0,30
+29,29,Hospital Santa Marta (Taguatinga),-15.8521,-48.0432,MEDIA,99.59,2.0,15
+30,30,Hospital Anchieta (Taguatinga),-15.8198,-48.0654,BAIXA,27.55,1.0,45
+31,31,Hospital Daher (Lago Sul),-15.8234,-47.8654,ALTA,27.69,5.0,20
+32,32,Hospital Alvorada (Asa Sul),-15.8187,-47.9054,CRITICA,12.06,10.0,20
+33,33,Hospital Prontonorte,-15.7612,-47.8856,BAIXA,66.3,1.0,45
+34,34,Hospital São Mateus (Cruzeiro),-15.7921,-47.9341,ALTA,92.47,5.0,60
+35,35,Hospital Maria Auxiliadora (Gama),-16.0187,-48.0678,MEDIA,37.32,2.0,10
+36,36,Hospital Home (Asa Sul),-15.8256,-47.9134,ALTA,83.42,5.0,15
+37,37,DF Star (Asa Sul),-15.8211,-47.9112,MEDIA,85.38,2.0,30
+38,38,Hospital Águas Claras,-15.8387,-48.0254,CRITICA,55.72,10.0,15
+39,39,Hospital São Francisco (Ceilândia),-15.8112,-48.1054,ALTA,57.57,5.0,10
+40,40,Hospital de Clínicas de Brasília,-15.8154,-47.9098,BAIXA,14.08,1.0,60
+41,41,UPA Ceilândia I,-15.8256,-48.1212,CRITICA,13.38,10.0,20
+42,42,UPA Ceilândia II,-15.8543,-48.1345,ALTA,16.33,5.0,10
+43,43,UPA Recanto das Emas,-15.8987,-48.0654,BAIXA,28.87,1.0,60
+44,44,UPA Samambaia,-15.8821,-48.1132,BAIXA,58.58,1.0,15
+45,45,UPA Sobradinho,-15.6612,-47.7854,MEDIA,80.4,2.0,30
+46,46,UPA São Sebastião,-15.8912,-47.7712,BAIXA,13.04,1.0,15
+47,47,UPA Núcleo Bandeirante,-15.8754,-47.9612,BAIXA,66.26,1.0,60
+48,48,UPA Vicente Pires,-15.8012,-48.0234,CRITICA,14.42,10.0,15
+49,49,UPA Planaltina,-15.6234,-47.6612,ALTA,50.49,5.0,45
+50,50,UPA Gama,-16.0256,-48.0712,MEDIA,25.42,2.0,45
+51,51,Policlínica de Taguatinga,-15.8312,-48.0512,CRITICA,89.37,10.0,15
+52,52,Policlínica de Ceilândia,-15.8212,-48.1145,BAIXA,59.55,1.0,10
+53,53,Policlínica do Paranoá,-15.7754,-47.7812,ALTA,40.58,5.0,10
+54,54,Policlínica do Guará,-15.8187,-47.9812,CRITICA,92.67,10.0,60
+55,55,Policlínica de Planaltina,-15.6154,-47.6543,BAIXA,61.8,1.0,15
+56,56,Hospital Sarah Kubitschek (Asa Sul),-15.8034,-47.8921,BAIXA,29.89,1.0,60
+57,57,Hospital Sarah Kubitschek (Lago Norte),-15.7312,-47.8643,BAIXA,19.46,1.0,10
+58,58,Instituto de Cardiologia do DF (ICDF),-15.7954,-47.9123,MEDIA,46.26,2.0,20
+59,59,Hospital Veterinário de Brasília (HVEP),-15.7943,-48.0212,ALTA,27.06,5.0,60
+60,60,Centro de Saúde 01 Asa Sul,-15.8123,-47.8945,BAIXA,42.53,1.0,10
+61,61,Centro de Saúde 02 Asa Sul,-15.8156,-47.9012,ALTA,84.75,5.0,60
+62,62,Centro de Saúde 01 Asa Norte,-15.7743,-47.8812,ALTA,24.37,5.0,15
+63,63,Centro de Saúde 03 Asa Norte,-15.7654,-47.8912,MEDIA,18.56,2.0,10
+64,64,Hospital MedSenior,-15.8198,-47.9156,MEDIA,50.29,2.0,45
+65,65,Hospital Sírio-Libanês (Brasília),-15.8234,-47.9132,CRITICA,90.83,10.0,45
+66,66,Hospital Life Center,-15.8254,-47.9145,CRITICA,78.97,10.0,45
+67,67,Hospital Coração do Brasil,-15.8212,-47.9187,MEDIA,98.6,2.0,15
+68,68,Hospital Metropolitano,-15.8343,-48.0532,MEDIA,55.06,2.0,10
+69,69,Centro Clínico Advance,-15.8201,-47.9154,CRITICA,39.6,10.0,10
+70,70,Hospital de Olhos CBV,-15.8265,-47.9212,BAIXA,13.41,1.0,10
+71,71,Hospital de Olhos Dr. Ricardo Guimarães,-15.8312,-47.9054,CRITICA,29.18,10.0,15
+72,72,Hospital do Coração de Taguatinga,-15.8345,-48.0512,ALTA,42.46,5.0,60
+73,73,Instituto de Câncer de Brasília,-15.8234,-47.9112,BAIXA,78.6,1.0,60
+74,74,Centro Radiológico de Brasília,-15.8201,-47.9101,CRITICA,29.26,10.0,45
+75,75,Hospital Ortopédico de Brasília (HOBS),-15.8212,-47.9143,MEDIA,52.24,2.0,30
+76,76,Unidade de Pronto Atendimento Riacho Fundo II,-15.9012,-48.0432,MEDIA,62.65,2.0,45
+77,77,UBS 01 Santa Maria,-16.0123,-48.0145,ALTA,12.32,5.0,10
+78,78,UBS 02 Santa Maria,-16.0187,-48.0098,ALTA,31.44,5.0,10
+79,79,UBS 01 São Sebastião,-15.8943,-47.7754,BAIXA,66.06,1.0,10
+80,80,UBS 01 Recanto das Emas,-15.9012,-48.0612,ALTA,98.14,5.0,45
+81,81,UBS 01 Estrutural,-15.7843,-47.9812,CRITICA,89.2,10.0,60
+82,82,UBS 01 Varjão,-15.7234,-47.8745,ALTA,84.22,5.0,30
+83,83,UBS 01 Itapoã,-15.7512,-47.7654,BAIXA,37.81,1.0,15
+84,84,UBS 01 Jardim Botânico,-15.8543,-47.8212,CRITICA,16.09,10.0,60
+85,85,UBS 01 Sudoeste,-15.7987,-47.9212,ALTA,42.16,5.0,45
+86,86,UBS 01 Cruzeiro,-15.7912,-47.9354,CRITICA,65.15,10.0,45
+87,87,UBS 02 Cruzeiro,-15.7845,-47.9412,CRITICA,66.69,10.0,60
+88,88,UBS 01 Candangolândia,-15.8512,-47.9512,ALTA,28.23,5.0,30
+89,89,UBS 01 Núcleo Bandeirante,-15.8712,-47.9654,BAIXA,87.96,1.0,60
+90,90,UBS 01 Riacho Fundo I,-15.8812,-47.9912,ALTA,44.74,5.0,30
+91,91,UBS 01 Park Way,-15.8943,-47.9612,MEDIA,58.34,2.0,10
+92,92,UBS 01 Águas Claras,-15.8412,-48.0312,ALTA,13.61,5.0,30
+93,93,UBS 01 Vicente Pires,-15.8043,-48.0154,MEDIA,51.33,2.0,30
+94,94,UBS 01 Fercal,-15.6012,-47.8612,MEDIA,51.36,2.0,60
+95,95,UBS 01 Sobradinho II,-15.6412,-47.8012,MEDIA,15.07,2.0,45
+96,96,UBS 02 Sobradinho,-15.6543,-47.7912,MEDIA,39.57,2.0,15
+97,97,UBS 01 Planaltina (Vila Buritis),-15.6212,-47.6512,CRITICA,18.58,10.0,10
+98,98,UBS 02 Planaltina,-15.6187,-47.6612,MEDIA,34.45,2.0,30
+99,99,UBS 01 Paranoá,-15.7712,-47.7843,ALTA,53.0,5.0,20
+100,100,UBS 01 Lago Norte,-15.7412,-47.8812,MEDIA,73.08,2.0,15
