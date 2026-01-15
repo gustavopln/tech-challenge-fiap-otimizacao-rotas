@@ -21,11 +21,17 @@ import math
 import random
 from dataclasses import dataclass
 from typing import List, Tuple, Sequence, Dict
+from src.visualization.gerar_mapa_rotas_vrp import gerar_mapa_rotas_vrp
 
 import pandas as pd
 
 from src.models.models import Entrega, Veiculo, Base, Rota, PrioridadeEntrega
 from src.models.base_default import BASE_PADRAO
+from src.utils.relatorios_ga import (
+    GAEvolutionReport,
+    relatorio_populacao_inicial_vs_final,
+    exportar_historico_para_csv
+)
 
 # =====================================================================
 # Utilitários de domínio e carregamento de dados
@@ -977,10 +983,10 @@ if __name__ == "__main__":
 
     # Exemplo: usar todos os veículos do CSV
     config = GAConfig(
-        tamanho_populacao=80,
-        geracoes=80,
-        taxa_mutacao=0.2,
-        elitismo=0.1,
+        tamanho_populacao=150,
+        geracoes=1000,
+        taxa_mutacao=0.25,
+        elitismo=0.03,
     )
 
     print("=== CENÁRIO 1: VRP com população totalmente aleatória ===")
@@ -1012,3 +1018,34 @@ if __name__ == "__main__":
         print(f"  Carga total: {rota.carga_total_kg:.2f} kg")
         print(f"  Tempo total: {rota.tempo_total_min:.2f} min\n")
         print()
+
+    # -----------------------------------------
+    # Relatórios de evolução do GA (cenário semeado)
+    # -----------------------------------------
+    report = GAEvolutionReport(
+        nome_cenario="VRP - população semeada (rotas_iniciais.csv)",
+        historico_fitness=historico_semeado,
+    )
+
+    print()
+    print(report.resumo_texto())
+    print()
+    print(relatorio_populacao_inicial_vs_final(
+        "VRP - população semeada (rotas_iniciais.csv)",
+        historico_semeado,
+    ))
+
+    # Exporta histórico para CSV para análise em notebook / relatório
+    exportar_historico_para_csv(
+        "data/resultados/historico_ga_vrp_semeado.csv",
+        historico_semeado,
+        nome_coluna="fitness_melhor_individuo",
+    )
+    print("\nHistórico de fitness exportado para data/resultados/historico_ga_vrp_semeado.csv")
+    
+    # Geração automática do mapa VRP a partir das rotas semeadas
+    gerar_mapa_rotas_vrp(    
+        rotas_semeado,
+        nome_arquivo="data/resultados/mapa_rotas_vrp.html",
+    )
+    print("Mapa das rotas VRP gerado em data/resultados/mapa_rotas_vrp.html")
