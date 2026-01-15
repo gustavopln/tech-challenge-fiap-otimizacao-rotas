@@ -70,3 +70,4 @@ dependencies:
       - zipp==3.20.2
       - openai==1.54.3
       - python-dotenv==1.0.0
+      - folium==0.20.0
