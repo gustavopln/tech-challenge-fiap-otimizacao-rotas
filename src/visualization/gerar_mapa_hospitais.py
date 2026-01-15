@@ -49,7 +49,7 @@ folium.CircleMarker(
 ).add_to(mapa_df)
 
 # 5. Salvar o mapa em um arquivo HTML
-mapa_df.save('data/mapa_hospitais_brasilia.html')
+mapa_df.save('data/resultados/mapa_hospitais_brasilia.html')
 
 print("Sucesso! O mapa foi gerado e salvo como 'mapa_hospitais_brasilia.html'.")
 print("Abra esse arquivo no seu navegador para visualizar o resultado.")
