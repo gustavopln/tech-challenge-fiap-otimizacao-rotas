@@ -1,4 +1,5 @@
 import folium
+from pathlib import Path
 from typing import List
 
 from src.models.base_default import BASE_PADRAO
@@ -8,9 +9,10 @@ from src.models.models import Rota
 def gerar_mapa_rotas_vrp(
     rotas: List[Rota],
     nome_arquivo: str = "data/resultados/mapa_rotas_vrp.html",
-) -> None:
+    salvar_arquivo: bool = True,
+) -> folium.Map:
     """
-    Gera um mapa Folium com as rotas do VRP:
+    Gera um mapa Folium com as rotas do VRP e retorna o objeto folium.Map.
 
     - Cada veículo em uma camada (FeatureGroup) separada
     - Rotas (linhas) e paradas (pontos numerados) aparecem
@@ -95,6 +97,11 @@ def gerar_mapa_rotas_vrp(
     folium.LayerControl(collapsed=False).add_to(mapa)
 
     # Salva o mapa
-    mapa.save(nome_arquivo)    
-    print(f"\nMapa das rotas VRP gerado em: {nome_arquivo}")
-    print("Ative/desative as rotas dos veículos na legenda do mapa.")
+    if salvar_arquivo and nome_arquivo:
+        caminho = Path(nome_arquivo)
+        caminho.parent.mkdir(parents=True, exist_ok=True)
+        mapa.save(str(caminho))    
+        print(f"\nMapa das rotas VRP gerado em: {caminho}")
+        print("Ative/desative as rotas dos veículos na legenda do mapa.")
+    
+    return mapa
