@@ -726,5 +726,5 @@ if __name__ == "__main__":
     # Geração automática do mapa VRP a partir das rotas semeadas
     gerar_mapa_rotas_vrp(    
         rotas_semeado,
-        nome_arquivo="data/resultados/mapa_rotas_vrp.html",
-    )    
+        nome_arquivo="data/resultados/mapa_rotas_vrp.html"
+    )
