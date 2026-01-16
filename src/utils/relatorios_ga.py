@@ -72,22 +72,21 @@ class GAEvolutionReport:
             return 0.0
         return (self.melhoria_absoluta / self.fitness_inicial) * 100.0
 
-    def resumo_texto(self) -> str:
-        """
-        Gera um resumo textual em português, pronto para ser usado
-        no relatório técnico ou impresso no console.
-        """
-        linhas = [
-            f"=== Evolução do cenário: {self.nome_cenario} ===",
-            f"Número de gerações avaliadas: {self.num_geracoes}",
-            f"Fitness inicial (população semeada): {self.fitness_inicial:.2f}",
-            f"Fitness final (após evolução): {self.fitness_final:.2f}",
-            f"Melhor fitness observado: {self.melhor_fitness:.2f}",
-            f"Geração do melhor fitness: {self.geracao_melhor_fitness}",
-            f"Melhoria absoluta (inicial - final): {self.melhoria_absoluta:.2f}",
-            f"Melhoria relativa: {self.melhoria_relativa_pct:.2f}%",
-        ]
-        return "\n".join(linhas)
+    # def resumo_texto(self) -> str:
+    #     """
+    #     Gera um resumo textual em português, pronto para ser usado no relatório técnico ou impresso no console.
+    #     """
+    #     linhas = [
+    #         f"=== Evolução do cenário: {self.nome_cenario} ===",
+    #         f"Número de gerações avaliadas: {self.num_geracoes}",
+    #         f"Fitness inicial (população semeada): {self.fitness_inicial:.2f}",
+    #         f"Fitness final (após evolução): {self.fitness_final:.2f}",
+    #         f"Melhor fitness observado: {self.melhor_fitness:.2f}",
+    #         f"Geração do melhor fitness: {self.geracao_melhor_fitness}",
+    #         f"Melhoria absoluta (inicial - final): {self.melhoria_absoluta:.2f}",
+    #         f"Melhoria relativa: {self.melhoria_relativa_pct:.2f}%",
+    #     ]
+    #     return "\n".join(linhas)
 
 
 def relatorio_populacao_inicial_vs_final(
@@ -95,8 +94,7 @@ def relatorio_populacao_inicial_vs_final(
     historico_fitness: List[float],
 ) -> str:
     """
-    Gera um texto focado em comparar população inicial (semeada)
-    vs população evoluída (filhos/mutação ao longo das gerações).
+    Gera um texto focado em comparar população inicial (semeada) vs população evoluída (filhos/mutação ao longo das gerações).
 
     Pressupõe que:
       - historico_fitness[0]  = melhor indivíduo da população inicial
@@ -107,14 +105,18 @@ def relatorio_populacao_inicial_vs_final(
 
     report = GAEvolutionReport(nome_cenario=nome_cenario, historico_fitness=historico_fitness)
 
+    sep = "=" * 94
+
     linhas = [
+        sep,
         f"=== População inicial vs população evoluída ({nome_cenario}) ===",
+        sep,
         f"Gerações avaliadas: {report.num_geracoes}",
         f"Fitness população inicial (geração 1): {report.fitness_inicial:.2f}",
         f"Fitness população final (geração {report.num_geracoes}): {report.fitness_final:.2f}",
-        f"Melhor fitness em todo o processo: {report.melhor_fitness:.2f} "
-        f"(geração {report.geracao_melhor_fitness})",
-        f"Melhoria absoluta: {report.melhoria_absoluta:.2f}",
+        f"Melhor fitness observado: {report.melhor_fitness:.2f}",
+        f"Geração do melhor fitness: {report.geracao_melhor_fitness}",
+        f"Melhoria absoluta (inicial - final): {report.melhoria_absoluta:.2f}",
         f"Melhoria relativa: {report.melhoria_relativa_pct:.2f}%",
     ]
 
@@ -135,8 +137,7 @@ def exportar_historico_para_csv(
         2, ...
         ...
 
-    Isso é útil para gerar gráficos no notebooks/experimentos.ipynb
-    e incluir prints no relatório técnico.
+    Isso é útil para gerar gráficos no notebooks/experimentos.ipynb e incluir prints no relatório técnico.
     """
     caminho = Path(caminho)
     if caminho.parent and not caminho.parent.exists():

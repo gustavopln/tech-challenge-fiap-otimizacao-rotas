@@ -48,7 +48,7 @@ def gerar_mapa_rotas_vrp(
         "darkred",
         "darkgreen",
         "cadetblue",
-        "darkpurple",
+        "yellow",
         "darkblue",
     ]    
 
@@ -95,6 +95,6 @@ def gerar_mapa_rotas_vrp(
     folium.LayerControl(collapsed=False).add_to(mapa)
 
     # Salva o mapa
-    mapa.save(nome_arquivo)
-    print(f"Mapa de rotas VRP salvo em: {nome_arquivo}")
+    mapa.save(nome_arquivo)    
+    print(f"\nMapa das rotas VRP gerado em: {nome_arquivo}")
     print("Ative/desative as rotas dos veículos na legenda do mapa.")
