@@ -62,7 +62,7 @@ def gerar_mapa_rotas_vrp(
         # Cria uma camada específica para este veículo
         fg = folium.FeatureGroup(
             name=f"Veículo {veiculo_id}",
-            show=False,  # começa oculto
+            show=(idx_veic == 0),  # primeiro veículo visível por padrão
         )
 
         coords = rota.sequencia  # lista de (lat, lng)
